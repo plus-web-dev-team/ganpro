@@ -1,0 +1,53 @@
+<a href="/">
+    <img src="/public/images/logo.svg" alt="がんプロ" />
+    <h1>弘前大学<span>がん</span>プロ</h1>
+</a>
+<ul>
+    <li><a href="/">ホーム</a></li>
+    <li><a href="#about">がんプロについて</a></li>
+    <li><a href="">ごあいさつ</a></li>
+    <li><a href="">講座・イベント</a></li>
+    <li><a href="">養成コース</a></li>
+    <li><a href="">連携大学</a></li>
+    <li><a href="">お問い合わせ</a></li>
+    <li><a href="">ログイン</a></li>
+</ul>
+<style lang="scss">
+    ul {
+        display: flex;
+        list-style-type: none;
+        a {
+            text-decoration: none;
+            color: inherit;
+            padding: 1rem;
+            position: relative;
+            overflow: hidden;
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 0;
+                height: 2px;
+                background-color: var(--secondary-color);
+                transition: width 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            }
+            &:hover {
+                &::before {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    span {
+        color: var(--secondary-color);
+    }
+    a {
+        display: flex;
+        text-decoration: none;
+    }
+    img {
+        width: 10rem;
+        margin-right: 1rem;
+    }
+</style>
