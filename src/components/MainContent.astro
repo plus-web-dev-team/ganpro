@@ -178,6 +178,11 @@ import Carousel from "../components/Carousel.astro";
             article {
                 width: 45%;
             }
+            @media (max-width: 425px) {
+                article {
+                    width: 100%;
+                }
+            }
         }
     }
 
@@ -222,7 +227,7 @@ import Carousel from "../components/Carousel.astro";
             letter-spacing: 10px;
             text-align: justify;
             @media (max-width: 1279px) {
-                font-size: 88px;
+                font-size: clamp(2.25rem, 0.902rem + 5.75vw, 5.5rem);
                 letter-spacing: 0;
                 text-align: center;
             }
