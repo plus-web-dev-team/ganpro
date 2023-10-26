@@ -1,64 +1,62 @@
-<div class="carousel-container">
-    <div class="carousel">
-        <div class="carousel-item">
+---
+import Swiper from "swiper";
+import "swiper/css";
+---
+
+<div class="swiper">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
             <img
                 src="/public/images/slides/slide-1.jpg"
                 alt="第15回弘大病院がん診療市民公開講座"
             />
         </div>
-        <div class="carousel-item">
+        <div class="swiper-slide">
             <img
                 src="/public/images/slides/slide-2.jpg"
                 alt="がんと生きるオンライン市民公開フォーラム"
             />
         </div>
-        <div class="carousel-item">
+        <div class="swiper-slide">
             <img
                 src="/public/images/slides/slide-3.jpg"
                 alt="第14回弘大病院がん診療市民公開講座"
             />
         </div>
-        <!-- さらにスライドを追加 -->
     </div>
-    <button class="prev-button">＜</button>
-    <button class="next-button">＞</button>
+    <!-- ページネーション -->
+    <div class="swiper-pagination"></div>
+    <!-- 前後の矢印 -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
 </div>
 <style>
-    .carousel-container {
-        position: relative;
-        overflow: hidden;
-        width: 100%; /* カルーセルの表示幅を調整 */
-        margin: 0 auto 40px; /* カルーセルを中央に配置 */
-    }
-
-    .carousel {
-        display: flex;
-        transition: transform 0.3s ease;
-    }
-
-    .carousel-item {
-        flex: 0 0 100%; /* スライドの幅を設定 */
-    }
-
-    .prev-button,
-    .next-button {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background: rgba(255, 255, 255, 0.5); /* 白い透過の背景 */
-        color: white;
-        border: none;
-        cursor: pointer;
-        width: 40px; /* ボタンの幅 */
-        height: 40px; /* ボタンの高さ */
-        border-radius: 50%; /* 円形のボタン */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 18px; /* ボタンのテキストサイズ */
-    }
-
-    .next-button {
-        right: 0;
+    .swiper-slide img {
+        height: auto;
+        width: 100%;
     }
 </style>
+<script>
+    const swiper = new Swiper(".swiper", {
+        loop: true, // ループ
+        speed: 1500, // 少しゆっくり(デフォルトは300)
+        slidesPerView: 1.5, // 一度に表示する枚数
+        spaceBetween: 30, // スライド間の距離
+        centeredSlides: true, // アクティブなスライドを中央にする
+        autoplay: {
+            // 自動再生
+            delay: 1000, // 1秒後に次のスライド
+            disableOnInteraction: false, // 矢印をクリックしても自動再生を止めない
+        },
+        // ページネーション
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        // 前後の矢印
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+</script>
