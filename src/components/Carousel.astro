@@ -1,0 +1,64 @@
+<div class="carousel-container">
+    <div class="carousel">
+        <div class="carousel-item">
+            <img
+                src="/public/images/slides/slide-1.jpg"
+                alt="第15回弘大病院がん診療市民公開講座"
+            />
+        </div>
+        <div class="carousel-item">
+            <img
+                src="/public/images/slides/slide-2.jpg"
+                alt="がんと生きるオンライン市民公開フォーラム"
+            />
+        </div>
+        <div class="carousel-item">
+            <img
+                src="/public/images/slides/slide-3.jpg"
+                alt="第14回弘大病院がん診療市民公開講座"
+            />
+        </div>
+        <!-- さらにスライドを追加 -->
+    </div>
+    <button class="prev-button">＜</button>
+    <button class="next-button">＞</button>
+</div>
+<style>
+    .carousel-container {
+        position: relative;
+        overflow: hidden;
+        width: 100%; /* カルーセルの表示幅を調整 */
+        margin: 0 auto 40px; /* カルーセルを中央に配置 */
+    }
+
+    .carousel {
+        display: flex;
+        transition: transform 0.3s ease;
+    }
+
+    .carousel-item {
+        flex: 0 0 100%; /* スライドの幅を設定 */
+    }
+
+    .prev-button,
+    .next-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(255, 255, 255, 0.5); /* 白い透過の背景 */
+        color: white;
+        border: none;
+        cursor: pointer;
+        width: 40px; /* ボタンの幅 */
+        height: 40px; /* ボタンの高さ */
+        border-radius: 50%; /* 円形のボタン */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px; /* ボタンのテキストサイズ */
+    }
+
+    .next-button {
+        right: 0;
+    }
+</style>
