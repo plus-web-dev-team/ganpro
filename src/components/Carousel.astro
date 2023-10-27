@@ -1,27 +1,28 @@
----
-import Swiper from "swiper";
-import "swiper/css";
----
-
 <div class="swiper">
     <div class="swiper-wrapper">
         <div class="swiper-slide">
-            <img
-                src="/public/images/slides/slide-1.jpg"
-                alt="第15回弘大病院がん診療市民公開講座"
-            />
+            <a href="">
+                <img
+                    src="/public/images/slides/slide-1.jpg"
+                    alt="第15回弘大病院がん診療市民公開講座"
+                />
+            </a>
         </div>
         <div class="swiper-slide">
-            <img
-                src="/public/images/slides/slide-2.jpg"
-                alt="がんと生きるオンライン市民公開フォーラム"
-            />
+            <a href="">
+                <img
+                    src="/public/images/slides/slide-2.jpg"
+                    alt="がんと生きるオンライン市民公開フォーラム"
+                />
+            </a>
         </div>
         <div class="swiper-slide">
-            <img
-                src="/public/images/slides/slide-3.jpg"
-                alt="第14回弘大病院がん診療市民公開講座"
-            />
+            <a href="">
+                <img
+                    src="/public/images/slides/slide-3.jpg"
+                    alt="第14回弘大病院がん診療市民公開講座"
+                />
+            </a>
         </div>
     </div>
     <!-- ページネーション -->
@@ -35,7 +36,43 @@ import "swiper/css";
         height: auto;
         width: 100%;
     }
+    /* 前へ次への矢印カスタマイズ */
+    .swiper-button-prev,
+    .swiper-button-next {
+        height: 50px;
+        width: 50px;
+    }
+    /* 前へ次への矢印カスタマイズ */
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+        background-repeat: no-repeat;
+        background-size: contain;
+        content: "";
+        height: 50px;
+        margin: auto;
+        width: 50px;
+    }
+    /* 前への矢印カスタマイズ */
+    .swiper-button-prev::after {
+        background-image: url(/public/images/prev.svg);
+    }
+    /* 次への矢印カスタマイズ */
+    .swiper-button-next::after {
+        background-image: url(/public/images/next.svg);
+    }
+    /* 画像サイズ調整 */
+    .swiper-slide img {
+        height: auto;
+        width: 100%;
+    }
 </style>
+<link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+<script
+    is:inline
+    src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
     const swiper = new Swiper(".swiper", {
         loop: true, // ループ
@@ -47,11 +84,6 @@ import "swiper/css";
             // 自動再生
             delay: 1000, // 1秒後に次のスライド
             disableOnInteraction: false, // 矢印をクリックしても自動再生を止めない
-        },
-        // ページネーション
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
         },
         // 前後の矢印
         navigation: {

@@ -1,0 +1,170 @@
+<div class="spNav">
+    <a class="nav-button" href="#">メニュー</a>
+    <nav class="nav-wrap">
+        <ul class="nav">
+            <li><a href="#">ホーム</a></li>
+            <li><a href="#">がんプロについて</a></li>
+            <li><a href="#">ごあいさつ</a></li>
+            <li><a href="#">講座・イベント</a></li>
+            <li><a href="#">養成コース</a></li>
+            <li><a href="#">連携大学</a></li>
+            <li><a href="#">お問い合わせ</a></li>
+        </ul>
+    </nav>
+</div>
+<style lang="scss">
+    ul {
+        padding: 0;
+    }
+    @media (min-width: 1280px) {
+        .spNav {
+            display: none;
+        }
+    }
+    @media (max-width: 1279px) {
+        .spNav {
+            display: block;
+        }
+    }
+    .nav-button {
+        display: none;
+        font-weight: 500;
+    }
+    .nav {
+        a {
+            color: #000;
+            text-decoration: none;
+            font-size: 14px;
+            color: #448aff;
+        }
+        li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+    }
+    .nav-wrap.open {
+        display: block;
+    }
+    .nav-wrap.close {
+        display: none;
+    }
+    @media screen and (min-width: 1280px) {
+        .nav-wrap {
+            display: block !important;
+        }
+    }
+    .content {
+        padding: 20px;
+    }
+    @media screen and (max-width: 1279px) {
+        .nav-button {
+            display: block;
+            cursor: pointer;
+        }
+        .nav-wrap {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            display: none;
+            z-index: 10;
+            background-color: rgba(87, 75, 70, 1);
+            width: 90%;
+            height: 80%;
+            border-radius: 10px;
+            .nav {
+                height: 100%;
+                position: relative;
+                overflow-x: hidden;
+                overflow-y: auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            }
+            li {
+                display: block;
+                margin: 1em;
+                a {
+                    color: #fff;
+                    font-size: 18px;
+                }
+            }
+        }
+        /*メニューボタン*/
+        .nav-button,
+        .nav-button span {
+            display: inline-block;
+            transition: all 0.4s;
+            box-sizing: border-box;
+        }
+        .nav-button {
+            z-index: 20;
+            position: fixed;
+            width: 150px;
+            background-color: #574b46;
+            color: #fff;
+            text-decoration: none;
+            text-align: center;
+            margin: 0 auto;
+            display: block;
+            padding: 12px 42px;
+            border-radius: 5px;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+        }
+        .nav-button span {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: #fff;
+            border-radius: 4px;
+        }
+        .nav-button span:nth-of-type(1) {
+            top: 0;
+        }
+        .nav-button span:nth-of-type(2) {
+            top: 16px;
+        }
+        .nav-button span:nth-of-type(3) {
+            bottom: 0;
+        }
+        .nav-button.active span:nth-of-type(1) {
+            -webkit-transform: translateY(16px) rotate(-45deg);
+            transform: translateY(16px) rotate(-45deg);
+        }
+        .nav-button.active span:nth-of-type(2) {
+            opacity: 0;
+        }
+        .nav-button.active span:nth-of-type(3) {
+            -webkit-transform: translateY(-16px) rotate(45deg);
+            transform: translateY(-16px) rotate(45deg);
+        }
+    }
+</style>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const navButton = document.querySelector(".nav-button");
+        const navWrap = document.querySelector(".nav-wrap");
+
+        navButton.addEventListener("click", function (e) {
+            e.preventDefault(); // クリック時のデフォルト動作をキャンセル
+
+            if (navButton.classList.contains("active")) {
+                navButton.classList.remove("active");
+                navWrap.classList.add("close");
+                navWrap.classList.remove("open");
+            } else {
+                navButton.classList.add("active");
+                navWrap.classList.add("open");
+                navWrap.classList.remove("close");
+            }
+        });
+    });
+</script>

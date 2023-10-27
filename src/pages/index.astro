@@ -16,32 +16,23 @@ import MainContent from "../components/MainContent.astro";
 				<MainContent />
 			</div>
 		</div>
-		<style lang="scss">
-			.bg-primary {
-				background-color: var(--primary-color);
-			}
-			.repaet-image {
-				background-image: url(/public/images/repeat-image.svg);
-				background-position: top;
-				background-size: contain;
-				background-repeat: no-repeat;
-			}
-			.main-content {
-				display: flex;
-				flex-flow: row wrap;
-				gap: 4%;
-				padding: 0 6.25% 11.71875%;
-				max-width: 1280px;
-				margin: 0 auto;
-			}
-			.top-logo {
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				height: 100vh;
-				max-width: 80%;
-				margin: 0 auto;
-			}
-		</style>
 	</main>
+	<style lang="scss">
+		.main-content {
+			display: flex;
+			flex-flow: row wrap;
+			gap: 4%;
+			padding: 0 6.25% 7.71875%;
+			max-width: 1280px;
+			margin: 0 auto;
+		}
+		.top-logo {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			max-width: 80%;
+			margin: 0 auto;
+		}
+	</style>
 </Layout>
