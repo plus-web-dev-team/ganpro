@@ -234,6 +234,9 @@ import Carousel from "../components/Carousel.astro";
                 margin: 0 auto;
                 margin-bottom: 40px;
             }
+            @media (max-width: 375px) {
+                width: 100%;
+            }
         }
     }
 
@@ -278,12 +281,22 @@ import Carousel from "../components/Carousel.astro";
 
     // article中の下段「次世代のがんプロフェッショナル養成プラン」採択プログラム
     .program {
+        @media (max-width: 375px) {
+            img {
+                width: 80%;
+                margin: 0 auto;
+            }
+        }
         p:nth-of-type(1) {
             margin: 14px 0 10px;
             font-size: 12px;
         }
         p:nth-of-type(2) {
             font-size: 22px;
+            @media (max-width: 375px) {
+                font-size: 16px;
+                text-align: center;
+            }
             font-weight: 500;
         }
     }
@@ -306,12 +319,18 @@ import Carousel from "../components/Carousel.astro";
             color: #fff;
             width: 100%;
             padding: 25px;
+            @media (max-width: 375px) {
+                width: 60%;
+                margin: 0 auto;
+                padding: 16px;
+            }
+
             font-size: clamp(1rem, 0.689rem + 1.33vw, 1.75rem);
         }
         div {
             display: flex;
             flex-direction: column;
-            gap: 60px;
+            gap: 30px;
         }
     }
 
@@ -333,6 +352,10 @@ import Carousel from "../components/Carousel.astro";
                 img {
                     height: 100px;
                     margin: 0 auto;
+                    @media (max-width: 375px) {
+                        width: 30%;
+                        height: auto;
+                    }
                 }
             }
             p {
