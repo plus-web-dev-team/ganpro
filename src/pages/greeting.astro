@@ -1,0 +1,153 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Icons from "../components/Icons.astro";
+import BreadCrumb from "../components/BreadCrumb.astro";
+import MainContent from "../components/MainContent.astro";
+---
+
+<Layout title="がんプロ | ごあいさつ">
+    <main>
+        <BreadCrumb />
+        <div class="bg-primary greeting-wrapper">
+            <div class="greeting-desc">
+                <h2>ごあいさつ</h2>
+                <div class="card">
+                    <img src="/public/images/greeting/hirota.jpg" alt="" />
+                    <p>大学院医学研究科長</p>
+                    <h3>廣田 和美</h3>
+                    <p>
+                        弘前大学は2007年から5年間、秋田大学、岩手医科大学、岩手県立大学とともに「北東北がんプロフェッショナル養成プラン」を推進し、がん治療に関する専門医およびコメディカルスタッフを育成してまいりました。2012年からは東京医科歯科大学を主管校とする「次世代がん治療推進専門家養成プラン」の中で、「地域がん専門医療人養成コース」をスタートさせ、外科腫瘍医、腫瘍内科医、放射線腫瘍医の養成に努めてまいりました。この10年間の取り組みによって、従来の診療科を横断する人材養成体制の構築と全国的ながん教育の均霑化が整備されてきました。2017年からは東京医科歯科大学を主管校とし８大学が連携する「未来がん医療プロフェッショナル養成プラン」の中で、3つのコース（地域がん医療推進のための未来リーダー育成コース、小児血液・がん専門医育成コース、地域がん医療スタッフ育成のためのコーディネーター養成コース）を担当しました。
+                        2023年からは東北大学を主幹とし６大学が連携する「東北広域次世代がんプロ養成プラン」の中で、３つのコース（地域がん医療次世代リーダー育成コース、地域がん医療を推進する次世代病理診断医育成コース、地域がん医療を推進する次世代放射線治療医育成コース）を担当します。
+                    </p>
+                </div>
+                <ul>
+                    <li><a href="">研究科長</a></li>
+                    <li><a href="">佐藤教授</a></li>
+                    <li><a href="">黒瀬教授</a></li>
+                    <li><a href="">青木教授</a></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <div class="bg-primary repaet-image">
+        <MainContent />
+    </div>
+</Layout>
+<Icons />
+
+<style lang="scss">
+    .greeting-desc {
+        max-width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 6.12%;
+        h2 {
+            font-size: clamp(2rem, 1.171rem + 3.54vw, 4rem);
+            font-weight: 300;
+            text-align: center;
+            color: var(--secondary-color);
+            margin-bottom: 10%;
+        }
+        .card {
+            max-width: 768px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: white;
+            padding: 4rem;
+            @media (max-width: 768px) {
+                max-width: 425px;
+                padding: 2rem;
+            }
+            border-radius: 10px;
+            img {
+                border-radius: 50%;
+                margin-top: -20%;
+                margin-bottom: 16px;
+                @media (max-width: 768px) {
+                    width: 60%;
+                }
+            }
+            p:nth-of-type(1) {
+                font-size: 12px;
+                letter-spacing: 1.8px;
+            }
+            h3 {
+                font-size: 26px;
+                letter-spacing: 1.8px;
+                margin-bottom: 24px;
+            }
+            p:nth-of-type(2) {
+                max-width: 765px;
+                font-size: 16px;
+                letter-spacing: 1.8px;
+                @media (max-width: 768px) {
+                    height: 250px;
+                    overflow: scroll;
+                }
+            }
+        }
+        ul {
+            margin: 24px 0 0;
+            padding: 0;
+            list-style-type: none;
+            display: flex;
+            justify-content: space-between;
+            width: 425px;
+            font-weight: 500;
+            a {
+                text-decoration: none;
+                color: var(--secondary-color);
+            }
+            @media (max-width: 425px) {
+                width: 100%;
+            }
+        }
+    }
+</style>
+<script is:inline>
+// ul要素内のリンクを取得
+const links = document.querySelectorAll("ul li a");
+const card = document.querySelector(".card");
+
+// クリックイベントをリンクに追加
+links.forEach((link) => {
+    link.addEventListener("click", function (event) {
+        event.preventDefault(); // ページ遷移を防ぐ
+
+        // クリックされたリンクのテキストを取得
+        const selectedText = link.textContent;
+
+        // クリックされたリンクに対応するコンテンツを作成
+        let newContent = "";
+        switch (selectedText) {
+            case "研究科長":
+                // 研究科長のコンテンツを生成
+                newContent = `
+                        <img src="/public/images/greeting/hirota.jpg" alt="" />
+                        <p>大学院医学研究科長</p>
+                        <h3>廣田 和美</h3>
+                        <p>研究科長の説明文をここに追加</p>
+                    `;
+                break;
+            case "佐藤教授":
+                // 佐藤教授のコンテンツを生成
+                newContent = `
+                        <img src="佐藤のイメージURL" alt="" />
+                        <p>佐藤教授の役職</p>
+                        <h3>佐藤の名前</h3>
+                        <p>佐藤教授の説明文をここに追加</p>
+                    `;
+                break;
+            // 他のリンクに対するコンテンツも同様に追加
+        }
+
+        // .card要素内のクラスを保持しつつ中身を更新
+        card.innerHTML = newContent;
+    });
+});
+</script>

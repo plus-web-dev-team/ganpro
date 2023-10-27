@@ -1,18 +1,37 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Icons from "../components/Icons.astro";
+import BreadCrumb from "../components/BreadCrumb.astro";
+import MainContent from "../components/MainContent.astro";
 ---
 
-<Layout title="カレンダー">
+<Layout title="がんプロ | カレンダー">
     <main>
+        <BreadCrumb />
         <div class="calender-wrapper">
             <div id="calendar"></div>
+        </div>
+        <div class="bg-primary repaet-image">
+            <MainContent />
         </div>
     </main>
     <Icons />
 </Layout>
 
-<style lang="scss"></style>
+<style lang="scss">
+    .calender-wrapper {
+        margin: 6% auto;
+        max-width: 992px;
+        padding: 0 1rem;
+        @media (max-width: 400px) {
+            margin: 26% auto;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+    }
+</style>
 <script
     is:inline
     src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"
