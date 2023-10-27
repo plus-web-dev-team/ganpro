@@ -1,0 +1,36 @@
+<div class="icons">
+    <div>
+        <a href="">
+            <img src="/public/images/fb.svg" alt="" />
+        </a>
+        <a href="">
+            <img src="/public/images/calender.svg" alt="" />
+        </a>
+    </div>
+</div>
+<style lang="scss">
+    .icons {
+        position: fixed;
+        z-index: 20;
+        bottom: 30px;
+        right: 30px;
+        width: 100%;
+        @media (max-width: 866px) {
+            right: 0;
+            padding: 0 16px;
+        }
+        div {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 20px;
+            height: 50px;
+            @media (max-width: 762px) {
+                justify-content: space-between;
+            }
+            img {
+                width: 30px;
+            }
+        }
+    }
+</style>
