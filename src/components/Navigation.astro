@@ -22,20 +22,10 @@
             padding: 1rem;
             position: relative;
             overflow: hidden;
-            &::before {
-                content: "";
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                width: 0;
-                height: 2px;
-                background-color: var(--secondary-color);
-                transition: width 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            }
             &:hover {
-                &::before {
-                    width: 100%;
-                }
+                color: var(--secondary-color);
+                // 左から右へトランジション
+                transition: 0.3s;
             }
         }
     }
