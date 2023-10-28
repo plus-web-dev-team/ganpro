@@ -5,7 +5,7 @@ import Carousel from "../components/Carousel.astro";
 <div class="main-content">
     <div class="column-left">
         <article id="about">
-            <div class="training-plan">
+            <div class="plan">
                 <p>
                     文部科学省 令和5年度 大学教育再生戦略推進費<br />
                      「次世代のがんプロフェッショナル養成プラン」採択プログラム
@@ -22,13 +22,13 @@ import Carousel from "../components/Carousel.astro";
     </div>
     <div class="column-right">
         <article>
-            <div class="cource">
+            <div class="event">
                 <h2>講座・イベント</h2>
                 <Carousel />
             </div>
         </article>
         <article>
-            <div class="training">
+            <div class="cource">
                 <h2>養成コース</h2>
                 <div>
                     <a href="">次世代リーダー</a>
@@ -48,7 +48,8 @@ import Carousel from "../components/Carousel.astro";
                     <li>新潟大学</li>
                 </ul>
             </div>
-        </article><article>
+        </article>
+        <article>
             <div class="relevance">
                 <h2>弘前大学関連</h2>
                 <div class="related">
@@ -177,7 +178,6 @@ import Carousel from "../components/Carousel.astro";
     article {
         display: flex;
         flex-direction: column;
-        justify-content: center;
         flex: 1 1 auto;
         width: 300px;
         @media (max-width: 768px) {
@@ -200,7 +200,7 @@ import Carousel from "../components/Carousel.astro";
     }
 
     // article左「次世代のがんプロフェッショナル養成プラン」採択プログラム
-    .training-plan {
+    .plan {
         p:nth-of-type(1) {
             font-size: 10px;
             margin-bottom: 24px;
@@ -241,7 +241,7 @@ import Carousel from "../components/Carousel.astro";
     }
 
     // 講座・イベント
-    .cource {
+    .event {
         h2 {
             font-size: 32px;
             text-align: center;
@@ -250,6 +250,11 @@ import Carousel from "../components/Carousel.astro";
     }
 
     // 連携大学
+    #partner {
+        article {
+            align-self: center;
+        }
+    }
     .partner {
         ul {
             font-size: 14px;
@@ -302,7 +307,7 @@ import Carousel from "../components/Carousel.astro";
     }
 
     // 養成コース
-    .training {
+    .cource {
         display: flex;
         flex-direction: column;
         h2 {
