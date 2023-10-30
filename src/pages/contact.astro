@@ -1,0 +1,103 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Icons from "../components/Icons.astro";
+import BreadCrumb from "../components/BreadCrumb.astro";
+---
+
+<Layout title="がんプロ | お問い合わせ">
+    <main>
+        <BreadCrumb />
+        <div class="bg-primary contact-wrapper">
+            <div class="contact-desc">
+                <h2>お問い合わせ</h2>
+                <p>
+                    下記フォームに必要事項を入力後、確認ボタンを押してください。
+                </p>
+                <form method="post" action="/public/mail.php">
+                    <div>
+                        <p>ご用件</p>
+                        <select name="ご用件">
+                            <option value="">選択してください</option>
+                            <option value="ご質問・お問い合わせ"
+                                >ご質問・お問い合わせ</option
+                            >
+                            <option value="〇〇〇〇〇〇〇〇"
+                                >〇〇〇〇〇〇〇〇</option
+                            >
+                        </select>
+                    </div>
+                    <div>
+                        <p>お名前</p>
+                        <input size="20" type="text" name="お名前" />
+                        <span>※必須</span>
+                    </div>
+                    <div>
+                        <p>電話番号</p>
+                        <input size="30" type="text" name="電話番号" />
+                        <span>※必須</span>
+                    </div>
+                    <div>
+                        <p>Mail（半角）</p>
+                        <input size="30" type="text" name="Email" />
+                        <span>※必須</span>
+                    </div>
+                    <div>
+                        <p>お問い合わせ内容</p>
+                        <textarea name="お問い合わせ内容" cols="50" rows="5"
+                        ></textarea><span>※必須</span>
+                    </div>
+                    <div>
+                        <input type="submit" value="確認" />
+                        <input type="reset" value="リセット" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+</Layout>
+
+<Icons />
+
+<style lang="scss">
+    .contact-desc {
+        max-width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 6.12%;
+        h2 {
+            font-size: clamp(2rem, 1.171rem + 3.54vw, 4rem);
+            font-weight: 300;
+            text-align: center;
+            color: var(--secondary-color);
+            margin-bottom: 2%;
+        }
+        p:nth-of-type(1) {
+            margin-bottom: 2%;
+        }
+        select,
+        textarea,
+        input {
+            width: 100%;
+            padding: 2%;
+            border-radius: 5px;
+            border: solid 1px #ccc;
+        }
+        div {
+            margin: 5% 0 8%;
+        }
+        div:nth-of-type(6) {
+            display: flex;
+            gap: 16px;
+            input:first-child {
+                background-color: var(--secondary-color);
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+        }
+    }
+</style>

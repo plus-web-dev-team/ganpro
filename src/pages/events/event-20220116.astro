@@ -1,0 +1,171 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Icons from "../../components/Icons.astro";
+import BreadCrumb from "../../components/BreadCrumb.astro";
+import MainContent from "../../components/MainContent.astro";
+---
+
+<Layout title="講座・イベント「オンライン市民公開フォーラム～がんと生きる～」">
+    <main>
+        <BreadCrumb />
+        <div class="bg-primary event-wrapper">
+            <div class="event-desc">
+                <h2>オンライン市民公開フォーラム～がんと生きる～</h2>
+                <table>
+                    <tr>
+                        <td>日時：</td>
+                        <td
+                            ><p>2022年1月16日（日） 13：30～15：55</p>
+                            <p>(13：00より入室可)</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>内容：</td>
+                        <td
+                            ><p>
+                                <span>講演１「がん相談支援センター紹介」</span>
+                            </p>
+                            <p>十和田市立中央病院 社会福祉士</p>
+                            <p>佐伯 さつ子 先生</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <p><span>講演2「がん患者と療養」</span></p>
+                            <p>むつ総合病院 訪問看護認定看護師</p>
+                            <p>二本柳 舞 先生</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <p><span>講演3「がんと栄養」</span></p>
+                            <p>八戸市立市民病院 管理栄養士</p>
+                            <p>工藤 直美 先生</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td
+                            ><p>
+                                <span
+                                    >講演4「がんと生きる～進歩する医療が求める社会づくり～」</span
+                                >
+                            </p>
+                            <p>弘前大学医学部附属病院腫瘍内科 教授</p>
+                            <p>佐藤 温 先生</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>開催方法：</td>
+                        <td
+                            ><p>オンラインZoomウェビナーおよび会場</p>
+                            <p>同時開催</p></td
+                        >
+                    </tr>
+                    <tr>
+                        <td>参加費：</td><td>無料(要申込)</td>
+                    </tr>
+                    <tr>
+                        <td>対象：</td><td>一般市民</td>
+                    </tr>
+                    <tr>
+                        <td>申込方法：</td><td
+                            >【会場参加の場合】<br />
+                             会場での参加を希望される場合は、各医療機関のがん相談支援センターへお申し込みください。<br
+                            />
+                             ●黒石病院tel:0172-52-2121（内線7773）<br />
+                             ●むつ総合病院tel:0175-22-2111（内線3351）<br />
+                             ●八戸市立市民病院tel:0178-72-5148（直通）<br />
+                             ●青森労災病院tel:0178-33-1551（内線2354）
+                        </td>
+                    </tr>
+                </table>
+                <div class="link">
+                    <a href="">受付終了</a>
+                    <a href="">活動報告</a>
+                </div>
+            </div>
+            <div class="look">
+                <a href="/events">講座・イベント一覧へ</a>
+            </div>
+        </div>
+        <div class="bg-primary repaet-image">
+            <MainContent />
+        </div>
+    </main>
+    <Icons />
+
+    <style lang="scss">
+        .look {
+            display: flex;
+            justify-content: center;
+            padding: 2rem;
+            a {
+                padding: 10px 20px;
+                border-radius: 5px;
+                font-weight: 500;
+                text-decoration: none;
+                background-color: var(--font-color);
+                color: #fff;
+            }
+        }
+        .link {
+            display: flex;
+            width: 100%;
+            gap: 20px;
+            margin-top: 20px;
+            justify-content: center;
+            a {
+                padding: 10px 20px;
+                border-radius: 5px;
+                font-weight: 500;
+                text-decoration: none;
+            }
+            a:nth-of-type(1) {
+                background-color: var(--primary-color);
+                color: #fff;
+            }
+            a:nth-of-type(2) {
+                background-color: var(--font-color);
+                color: #fff;
+            }
+        }
+        .event-desc {
+            background-color: #fff;
+            border-radius: 20px;
+            max-width: 762px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            padding: 3.12%;
+            h2 {
+                font-size: clamp(1rem, 0.741rem + 1.1vw, 1.625rem);
+                font-weight: 300;
+                text-align: center;
+                color: var(--secondary-color);
+                margin-bottom: 2%;
+                align-self: center;
+            }
+            table {
+                width: 100%;
+                td {
+                    vertical-align: top;
+                }
+                td:nth-of-type(1) {
+                    width: 15%;
+                    font-weight: bold;
+                }
+                td:nth-of-type(2) {
+                    width: fit-content;
+                }
+                span {
+                    font-weight: 500;
+                }
+            }
+        }
+    </style>
+</Layout>

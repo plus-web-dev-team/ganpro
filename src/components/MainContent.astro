@@ -22,13 +22,13 @@ import Carousel from "../components/Carousel.astro";
     </div>
     <div class="column-right">
         <article>
-            <div class="cource">
+            <div class="event">
                 <h2>講座・イベント</h2>
                 <Carousel />
             </div>
         </article>
         <article>
-            <div class="training">
+            <div class="cource">
                 <h2>養成コース</h2>
                 <div>
                     <a href="">次世代リーダー</a>
@@ -41,11 +41,36 @@ import Carousel from "../components/Carousel.astro";
             <div class="partner">
                 <h2>連携大学</h2>
                 <ul>
-                    <li>東北大学</li>
-                    <li>秋田大学</li>
-                    <li>山形大学</li>
-                    <li>福島県立医科大学</li>
-                    <li>新潟大学</li>
+                    <li>
+                        <a
+                            href="http://www.ganpro.med.tohoku.ac.jp/index.html"
+                            target="_blank">東北大学</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="http://www.med.akita-u.ac.jp/~ganpro29/"
+                            target="_blank">秋田大学</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="https://www.id.yamagata-u.ac.jp/ganpro/"
+                            target="_blank">山形大学</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="https://www.fmu.ac.jp/byoin/25syuyocenter/08professional/index.html"
+                            target="_blank">福島県立医科大学</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="https://www.med.niigata-u.ac.jp/gan/"
+                            target="_blank">新潟大学</a
+                        >
+                    </li>
                 </ul>
             </div>
         </article><article>
@@ -53,32 +78,52 @@ import Carousel from "../components/Carousel.astro";
                 <h2>弘前大学関連</h2>
                 <div class="related">
                     <div>
-                        <img
-                            src="/public/images/face-right.svg"
-                            alt="腫瘍内科学講座"
-                        />
-                        <p>腫瘍内科学講座</p>
+                        <a
+                            href="http://www.med.hirosaki-u.ac.jp/~oncology/"
+                            target="_blank"
+                        >
+                            <img
+                                src="/public/images/face-right.svg"
+                                alt="腫瘍内科学講座"
+                            />
+                            <p>腫瘍内科学講座</p>
+                        </a>
                     </div>
                     <div>
-                        <img
-                            src="/public/images/face-center_smallSmile.svg"
-                            alt="病理診断学講座"
-                        />
-                        <p>病理診断学講座</p>
+                        <a
+                            href="http://www.med.hirosaki-u.ac.jp/~anatopathol/"
+                            target="_blank"
+                        >
+                            <img
+                                src="/public/images/face-center_smallSmile.svg"
+                                alt="病理診断学講座"
+                            />
+                            <p>病理診断学講座</p>
+                        </a>
                     </div>
                     <div>
-                        <img
-                            src="/public/images/face-center_smile.svg"
-                            alt="放射線腫瘍学講座、放射線診断学講座"
-                        />
-                        <p>放射線腫瘍学講座<br />放射線診断学講座</p>
+                        <a
+                            href="http://www.med.hirosaki-u.ac.jp/~radio/"
+                            target="_blank"
+                        >
+                            <img
+                                src="/public/images/face-center_smile.svg"
+                                alt="放射線腫瘍学講座、放射線診断学講座"
+                            />
+                            <p>放射線腫瘍学講座<br />放射線診断学講座</p>
+                        </a>
                     </div>
                     <div>
-                        <img
-                            src="/public/images/face-left.svg"
-                            alt="医学部附属病院腫瘍センター"
-                        />
-                        <p>医学部附属病院<br />腫瘍センター</p>
+                        <a
+                            href="https://www.med.hirosaki-u.ac.jp/~cancer-c/index.html"
+                            target="_blank"
+                        >
+                            <img
+                                src="/public/images/face-left.svg"
+                                alt="医学部附属病院腫瘍センター"
+                            />
+                            <p>医学部附属病院<br />腫瘍センター</p>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -177,7 +222,6 @@ import Carousel from "../components/Carousel.astro";
     article {
         display: flex;
         flex-direction: column;
-        justify-content: center;
         flex: 1 1 auto;
         width: 300px;
         @media (max-width: 768px) {
@@ -238,7 +282,7 @@ import Carousel from "../components/Carousel.astro";
     }
 
     // 講座・イベント
-    .cource {
+    .event {
         h2 {
             font-size: 32px;
             text-align: center;
@@ -247,7 +291,17 @@ import Carousel from "../components/Carousel.astro";
     }
 
     // 連携大学
+    #partner {
+        align-self: center;
+    }
     .partner {
+        a {
+            text-decoration: none;
+            &:hover {
+                color: var(--secondary-color);
+                transition: all 0.3s ease;
+            }
+        }
         ul {
             font-size: 14px;
             max-width: 100%;
@@ -289,7 +343,7 @@ import Carousel from "../components/Carousel.astro";
     }
 
     // 養成コース
-    .training {
+    .cource {
         display: flex;
         flex-direction: column;
         h2 {
@@ -327,6 +381,13 @@ import Carousel from "../components/Carousel.astro";
             display: flex;
             flex-wrap: wrap;
             text-align: center;
+            a {
+                text-decoration: none;
+                &:hover {
+                    color: var(--secondary-color);
+                    transition: all 0.3s ease;
+                }
+            }
             div {
                 flex-basis: 50%;
                 margin-bottom: 20px;

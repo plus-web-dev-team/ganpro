@@ -24,18 +24,10 @@
     }
 </style>
 <script is:inline>
-// ページのタイトルを取得
 const pageTitle = document.title;
-
-// | を区切り文字としてタイトルを分割
 const titleParts = pageTitle.split("|");
-
-// もし | が見つかった場合、右側の部分を取得
 const rightPart = titleParts.length > 1 ? titleParts[1].trim() : pageTitle;
-
-// 現在のページの要素を取得
 const currentPageElement = document.getElementById("currentPage");
 
-// ページのタイトルを設定
 currentPageElement.textContent = rightPart;
 </script>

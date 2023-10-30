@@ -1,0 +1,154 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Icons from "../../components/Icons.astro";
+import BreadCrumb from "../../components/BreadCrumb.astro";
+import MainContent from "../../components/MainContent.astro";
+---
+
+<Layout title="講座・イベント「第15回弘大病院がん診療市民公開講座」">
+    <main>
+        <BreadCrumb />
+        <div class="bg-primary event-wrapper">
+            <div class="event-desc">
+                <h2>第15回 弘大病院がん診療市民公開講座</h2>
+                <table>
+                    <tr>
+                        <td>日時：</td>
+                        <td
+                            ><p>2022年12月4日（日） 13：00～15：00</p>
+                            <p>(12：30より開場)</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>内容：</td>
+                        <td
+                            ><p>
+                                <span>講演１「妊孕性温存治療ってなに？」</span>
+                            </p>
+                            <p>弘前大学医学部附属病院 産婦人科 診療准教授</p>
+                            <p>福原 理恵 先生</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <p>
+                                <span
+                                    >講演2「乳がん治療を受けるA子さんの悩み〜妊孕生温存を考える〜」</span
+                                >
+                            </p>
+                            <p>
+                                弘前大学医学部附属病院 乳腺・甲状腺外科 診療講師
+                            </p>
+                            <p>西村 顕正 先生</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>開催方法：</td>
+                        <td><p>オンラインZoomウェビナー</p></td>
+                    </tr>
+                    <tr>
+                        <td>参加費：</td><td>無料(要申込)</td>
+                    </tr>
+                    <tr>
+                        <td>定員</td><td>500名</td>
+                    </tr>
+                    <tr>
+                        <td>対象：</td><td>一般市民</td>
+                    </tr>
+                    <tr>
+                        <td>申込方法：</td>
+                        <td>
+                            弘大病院がん相談支援センターホームページ掲載の申込フォームよりお申し込みください。<br
+                            />
+                             11月8日（火）より受付開始
+                        </td>
+                    </tr>
+                </table>
+                <div class="link">
+                    <a href="">受付終了</a>
+                    <a href="">活動報告</a>
+                </div>
+            </div>
+            <div class="look">
+                <a href="/events">講座・イベント一覧へ</a>
+            </div>
+        </div>
+        <div class="bg-primary repaet-image">
+            <MainContent />
+        </div>
+    </main>
+    <Icons />
+
+    <style lang="scss">
+        .look {
+            display: flex;
+            justify-content: center;
+            padding: 2rem;
+            a {
+                padding: 10px 20px;
+                border-radius: 5px;
+                font-weight: 500;
+                text-decoration: none;
+                background-color: var(--font-color);
+                color: #fff;
+            }
+        }
+        .link {
+            display: flex;
+            width: 100%;
+            gap: 20px;
+            margin-top: 20px;
+            justify-content: center;
+            a {
+                padding: 10px 20px;
+                border-radius: 5px;
+                font-weight: 500;
+                text-decoration: none;
+            }
+            a:nth-of-type(1) {
+                background-color: var(--primary-color);
+                color: #fff;
+            }
+            a:nth-of-type(2) {
+                background-color: var(--font-color);
+                color: #fff;
+            }
+        }
+        .event-desc {
+            background-color: #fff;
+            border-radius: 20px;
+            max-width: 762px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            padding: 3.12%;
+            h2 {
+                font-size: clamp(1rem, 0.741rem + 1.1vw, 1.625rem);
+                font-weight: 300;
+                text-align: center;
+                color: var(--secondary-color);
+                margin-bottom: 2%;
+                align-self: center;
+            }
+            table {
+                width: 100%;
+                td {
+                    vertical-align: top;
+                }
+                td:nth-of-type(1) {
+                    width: 15%;
+                    font-weight: bold;
+                }
+                td:nth-of-type(2) {
+                    width: fit-content;
+                }
+                span {
+                    font-weight: 500;
+                }
+            }
+        }
+    </style>
+</Layout>

@@ -1,0 +1,145 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Icons from "../components/Icons.astro";
+import BreadCrumb from "../components/BreadCrumb.astro";
+import MainContent from "../components/MainContent.astro";
+---
+
+<Layout title="がんプロ | 講座・イベント">
+    <main>
+        <BreadCrumb />
+        <div class="bg-primary events-wrapper">
+            <div class="events-desc">
+                <h2>講座・イベント</h2>
+                <div class="card-wrapper">
+                    <div class="card">
+                        <a href="/events/event-20221204">
+                            <img
+                                src="/public/images/slides/slide-1.jpg"
+                                alt=""
+                            />
+                            <div>
+                                <p>開催日：</p>
+                                <p>2022年12月04日（日）</p>
+                            </div>
+                            <div>
+                                <p>開催時間：</p>
+                                <p>13:00〜15:00</p>
+                            </div>
+                            <div>
+                                <p>定員：</p>
+                                <p>500名</p>
+                            </div>
+                            <div>
+                                <p>申込方法：</p>
+                                <p>2022年11月8日（火）から</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="/events/event-20220116">
+                            <img
+                                src="/public/images/slides/slide-2.jpg"
+                                alt=""
+                            />
+                            <div>
+                                <p>開催日：</p>
+                                <p>2022年01月16日（日）</p>
+                            </div>
+                            <div>
+                                <p>開催時間：</p>
+                                <p>13:30〜15:55</p>
+                            </div>
+                            <div>
+                                <p>定員：</p>
+                                <p>500名</p>
+                            </div>
+                            <div>
+                                <p>申込方法：</p>
+                                <p>2022年11月8日（火）から</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="/events/event-20211212">
+                            <img
+                                src="/public/images/slides/slide-3.jpg"
+                                alt=""
+                            />
+                            <div>
+                                <p>開催日：</p>
+                                <p>2022年12月04日（日）</p>
+                            </div>
+                            <div>
+                                <p>開催時間：</p>
+                                <p>13:00〜15:00</p>
+                            </div>
+                            <div>
+                                <p>定員：</p>
+                                <p>500名</p>
+                            </div>
+                            <div>
+                                <p>申込方法：</p>
+                                <p>2022年11月8日（火）から</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-primary repaet-image">
+            <MainContent />
+        </div>
+    </main>
+    <Icons />
+</Layout>
+
+<style lang="scss">
+    .events-desc {
+        max-width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 6.12%;
+        h2 {
+            font-size: clamp(2rem, 1.171rem + 3.54vw, 4rem);
+            font-weight: 300;
+            text-align: center;
+            color: var(--secondary-color);
+            margin-bottom: 2%;
+        }
+        .card-wrapper {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 1%;
+            @media (max-width: 768px) {
+                flex-direction: row;
+                gap: 2%;
+            }
+            .card {
+                background-color: #fff;
+                padding: 3.12%;
+                border-radius: 10px;
+                width: 32.33%;
+                font-size: 14px;
+                a {
+                    text-decoration: none;
+                }
+                img {
+                    margin-bottom: 20px;
+                }
+                div {
+                    display: flex;
+                    row-gap: 16px;
+                }
+                @media (max-width: 768px) {
+                    width: 48%;
+                }
+            }
+        }
+    }
+</style>
