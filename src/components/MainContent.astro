@@ -5,7 +5,7 @@ import Carousel from "../components/Carousel.astro";
 <div class="main-content">
     <div class="column-left">
         <article id="about">
-            <div class="training-plan">
+            <div class="plan">
                 <p>
                     文部科学省 令和5年度 大学教育再生戦略推進費<br />
                      「次世代のがんプロフェッショナル養成プラン」採択プログラム
@@ -73,7 +73,8 @@ import Carousel from "../components/Carousel.astro";
                     </li>
                 </ul>
             </div>
-        </article><article>
+        </article>
+        <article>
             <div class="relevance">
                 <h2>弘前大学関連</h2>
                 <div class="related">
@@ -244,7 +245,7 @@ import Carousel from "../components/Carousel.astro";
     }
 
     // article左「次世代のがんプロフェッショナル養成プラン」採択プログラム
-    .training-plan {
+    .plan {
         p:nth-of-type(1) {
             font-size: 10px;
             margin-bottom: 24px;
@@ -278,6 +279,9 @@ import Carousel from "../components/Carousel.astro";
                 margin: 0 auto;
                 margin-bottom: 40px;
             }
+            @media (max-width: 375px) {
+                width: 100%;
+            }
         }
     }
 
@@ -291,9 +295,6 @@ import Carousel from "../components/Carousel.astro";
     }
 
     // 連携大学
-    #partner {
-        align-self: center;
-    }
     .partner {
         a {
             text-decoration: none;
@@ -332,12 +333,22 @@ import Carousel from "../components/Carousel.astro";
 
     // article中の下段「次世代のがんプロフェッショナル養成プラン」採択プログラム
     .program {
+        @media (max-width: 375px) {
+            img {
+                width: 80%;
+                margin: 0 auto;
+            }
+        }
         p:nth-of-type(1) {
             margin: 14px 0 10px;
             font-size: 12px;
         }
         p:nth-of-type(2) {
             font-size: 22px;
+            @media (max-width: 375px) {
+                font-size: 16px;
+                text-align: center;
+            }
             font-weight: 500;
         }
     }
@@ -360,12 +371,18 @@ import Carousel from "../components/Carousel.astro";
             color: #fff;
             width: 100%;
             padding: 25px;
+            @media (max-width: 375px) {
+                width: 60%;
+                margin: 0 auto;
+                padding: 16px;
+            }
+
             font-size: clamp(1rem, 0.689rem + 1.33vw, 1.75rem);
         }
         div {
             display: flex;
             flex-direction: column;
-            gap: 60px;
+            gap: 30px;
         }
     }
 
@@ -394,6 +411,10 @@ import Carousel from "../components/Carousel.astro";
                 img {
                     height: 100px;
                     margin: 0 auto;
+                    @media (max-width: 375px) {
+                        width: 30%;
+                        height: auto;
+                    }
                 }
             }
             p {

@@ -5,33 +5,16 @@ import BreadCrumb from "../components/BreadCrumb.astro";
 import MainContent from "../components/MainContent.astro";
 ---
 
-<Layout title="弘前大学がんプロ | ごあいさつ">
+<Layout title="弘前大学がんプロ | 養成コース">
     <main>
         <BreadCrumb />
-        <div class="bg-primary greeting-wrapper">
-            <div class="greeting-desc">
-                <h2>ごあいさつ</h2>
-                <div class="card">
-                    <img src="" alt="" class="profile-image" />
-                    <p class="profile-title"></p>
-                    <h3 class="profile-name"></h3>
-                    <p class="profile-desc"></p>
-                </div>
-                <ul>
-                    <li><a href="#" data-profile="Hitora">研究科長</a></li>
-                    <li><a href="#" data-profile="Sato">佐藤教授</a></li>
-                    <li><a href="#" data-profile="Kurose">黒瀬教授</a></li>
-                    <li><a href="#" data-profile="Aoki">青木教授</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="bg-primary repaet-image">
-            <MainContent />
-        </div>
+        <div class="bg-primary"></div>
     </main>
-
-    <Icons />
+    <div class="bg-primary repaet-image">
+        <MainContent />
+    </div>
 </Layout>
+<Icons />
 
 <style lang="scss">
     .greeting-desc {
