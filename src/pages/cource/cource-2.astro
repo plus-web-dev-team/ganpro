@@ -1,0 +1,165 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Icons from "../components/Icons.astro";
+import BreadCrumb from "../components/BreadCrumb.astro";
+import MainContent from "../components/MainContent.astro";
+---
+
+<Layout title="養成コース | 地域がん医療次世代放射線治療医育成コース">
+    <main>
+        <BreadCrumb />
+        <div class="bg-primary cource-wrapper">
+            <div class="cource-desc">
+                <h2>地域がん医療次世代放射線治療医育成コース</h2>
+                <div class="card-wrapper">
+                    <div class="card">
+                        <a href="/events/event-20221204">
+                            <div class="card-title">
+                                <h3>
+                                    地域がん医療次世代放射線治療医育成コース
+                                </h3>
+                            </div>
+                            <div class="card-desc">
+                                <div>
+                                    <p>開催日：</p>
+                                    <p>2022年12月04日（日）</p>
+                                </div>
+                                <div>
+                                    <p>開催時間：</p>
+                                    <p>13:00〜15:00</p>
+                                </div>
+                                <div>
+                                    <p>定員：</p>
+                                    <p>500名</p>
+                                </div>
+                                <div>
+                                    <p>申込方法：</p>
+                                    <p>2022年11月8日（火）から</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="/events/event-20221204">
+                            <div class="card-title">
+                                <h3>
+                                    地域がん医療次世代放射線治療医育成コース
+                                </h3>
+                            </div>
+                            <div class="card-desc">
+                                <div>
+                                    <p>開催日：</p>
+                                    <p>2022年12月04日（日）</p>
+                                </div>
+                                <div>
+                                    <p>開催時間：</p>
+                                    <p>13:00〜15:00</p>
+                                </div>
+                                <div>
+                                    <p>定員：</p>
+                                    <p>500名</p>
+                                </div>
+                                <div>
+                                    <p>申込方法：</p>
+                                    <p>2022年11月8日（火）から</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="/events/event-20221204">
+                            <div class="card-title">
+                                <h3>
+                                    地域がん医療次世代放射線治療医育成コース
+                                </h3>
+                            </div>
+                            <div class="card-desc">
+                                <div>
+                                    <p>開催日：</p>
+                                    <p>2022年12月04日（日）</p>
+                                </div>
+                                <div>
+                                    <p>開催時間：</p>
+                                    <p>13:00〜15:00</p>
+                                </div>
+                                <div>
+                                    <p>定員：</p>
+                                    <p>500名</p>
+                                </div>
+                                <div>
+                                    <p>申込方法：</p>
+                                    <p>2022年11月8日（火）から</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-primary repaet-image">
+            <MainContent />
+        </div>
+    </main>
+    <Icons />
+</Layout>
+
+<style lang="scss">
+    .cource-desc {
+        max-width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 6.12%;
+        h2 {
+            font-size: clamp(2rem, 1.171rem + 3.54vw, 4rem);
+            font-weight: 300;
+            text-align: center;
+            color: var(--secondary-color);
+            margin-bottom: 2%;
+        }
+        .card-wrapper {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 1%;
+            @media (max-width: 768px) {
+                flex-direction: row;
+                gap: 2%;
+            }
+            .card {
+                background-color: #fff;
+                border-radius: 10px;
+                width: 32.33%;
+                font-size: 14px;
+                .card-title {
+                    background-color: var(--secondary-color);
+                    color: #fff;
+                    text-align: center;
+                    padding: 20px;
+                    border-radius: 10px 10px 0 0;
+                }
+                .card-desc {
+                    padding: 20px;
+                    display: flex;
+                    flex-direction: column;
+                }
+                a {
+                    text-decoration: none;
+                }
+                img {
+                    margin-bottom: 20px;
+                }
+                div {
+                    display: flex;
+                    row-gap: 16px;
+                }
+                @media (max-width: 768px) {
+                    width: 48%;
+                }
+            }
+        }
+    }
+</style>
