@@ -22,6 +22,10 @@ const { title } = Astro.props;
 			href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap"
 			rel="stylesheet"
 		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+		/>
 	</head>
 	<body>
 		<Header />
@@ -144,3 +148,121 @@ const { title } = Astro.props;
 		}
 	}
 </style>
+<script
+	is:inline
+	src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script
+	is:inline
+	src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"
+></script>
+<script is:inline>
+// パンくずリスト
+const pageTitle = document.title;
+const titleParts = pageTitle.split("|");
+let rightPart = pageTitle;
+
+if (titleParts.length > 1) {
+	rightPart = titleParts[1].trim();
+}
+
+const currentPageElement = document.getElementById("currentPage");
+
+if (currentPageElement) {
+	currentPageElement.textContent = rightPart;
+}
+
+// カルーセル
+const isTopPage = window.location.pathname === "/";
+
+if (isTopPage) {
+	const swiper = new Swiper(".swiper", {
+		loop: true,
+		speed: 1500,
+		slidesPerView: 1.5,
+		spaceBetween: 30,
+		centeredSlides: true,
+		autoplay: {
+			delay: 1000,
+			disableOnInteraction: false,
+		},
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+	});
+}
+
+// カレンダーページ FullCalendar
+document.addEventListener("DOMContentLoaded", () => {
+	const calendarEl = document.getElementById("calendar");
+	if (calendarEl) {
+		const calendar = new FullCalendar.Calendar(calendarEl, {
+			initialView: "dayGridMonth",
+			locale: "ja",
+		});
+		calendar.render();
+	}
+});
+
+// ごあいさつページ非同期読み込み
+const profiles = {
+	Hirota: {
+		profileImage: "/public/images/greeting/hirota.jpg",
+		profileName: "廣田 和美",
+		profileTitle: "大学院医学研究科長",
+		profileDesc:
+			"弘前大学は2007年から5年間、秋田大学、岩手医科大学、岩手県立大学とともに「北東北がんプロフェッショナル養成プラン」を推進し、がん治療に関する専門医およびコメディカルスタッフを育成してまいりました。2012年からは東京医科歯科大学を主管校とする「次世代がん治療推進専門家養成プラン」の中で、「地域がん専門医療人養成コース」をスタートさせ、外科腫瘍医、腫瘍内科医、放射線腫瘍医の養成に努めてまいりました。この10年間の取り組みによって、従来の診療科を横断する人材養成体制の構築と全国的ながん教育の均霑化が整備されてきました。2017年からは東京医科歯科大学を主管校とし８大学が連携する「未来がん医療プロフェッショナル養成プラン」の中で、3つのコース（地域がん医療推進のための未来リーダー育成コース、小児血液・がん専門医育成コース、地域がん医療スタッフ育成のためのコーディネーター養成コース）を担当しました。2023年からは東北大学を主幹とし６大学が連携する「東北広域次世代がんプロ養成プラン」の中で、３つのコース（地域がん医療次世代リーダー育成コース、地域がん医療を推進する次世代病理診断医育成コース、地域がん医療を推進する次世代放射線治療医育成コース）を担当します.",
+	},
+	Sato: {
+		profileImage: "/public/images/greeting/sato.jpg",
+		profileName: "佐藤 温",
+		profileTitle: "地域がん医療次世代リーダー育成コース責任者",
+		profileDesc:
+			"青森県は人口減・高齢化、そして若年層を含めたがん死亡率が最も高い地域です。しかし、これは本県だけが抱える問題ではありません。人口減・高齢化は今後の日本が抱える大きな問題であり、本県は日本の将来の最先端を走っている状況とも言えます。だからこそ、その対策を打ち出すモデル地区となることができるのです。地域におけるがん医療が抱える問題を解決するためには、がんに関わるすべての医療従事者の連携システムの構築と教育、そしてすべての世代の地域住民に対する教育が必要となります。その解決策として弘前大学では地域がん医療の向上を目的とした本コースを設けました。本コースは、がん専門医の習得のみならず、地域がん医療のリーダーとして、自ら地域がん医療の取り組むべき課題を抽出し、地域のリソース、需要を受け入れ、多職種連携によるチーム医療のネットワークを構築する等、次世代のがんに関わる医療人を育成することができる人材の養成を目標とします.医学研究科医科学専攻大学院生として4年間、予防医療学講座で指導医として臨床や疫学の基本から応用までの幅広い教育を行いました.診療所から地域病院、そして大学病院に至るまで、多様な医療機関での経験を積み、現在は多職種連携で行うかかりつけ医制度によるプライマリ・ケアがん医療に取り組んでいます. 佐藤温",
+	},
+	Kurose: {
+		profileImage: "/public/images/greeting/kurose.jpg",
+		profileName: "黒瀬 弘幸",
+		profileTitle: "次世代がん治療推進専門家養成プラン 責任者",
+		profileDesc:
+			"このたびの新型コロナウイルス感染症（COVID-19）の感染拡大により、医療・看護・救急救命など医療従事者の存在が非常に重要なものとなりました。国内外の専門家から専門的な知識が求められた中、これからの社会を支えるためには専門職の質の向上と多様な専門職との連携が不可欠です。そのための基盤として、医療系の専門家の育成が求められています。この時期に一層のステップアップを図るべく、次世代がん治療の推進を使命とし、次世代がん治療推進専門家養成プランを設けました。 次世代がん治療に関連する多職種連携をリードする人材の育成を行います. 平成30年に策定, 始動から３年を経た現在, 医学博士養成課程・修士課程（臨床医学）は年間3名（医学部出身者を対象に）, 博士課程・博士後期課程（臨床医学）は年間6名（博士課程修了者を対象に）の受験定員での募集としています. 高……",
+	},
+	Aoki: {
+		profileImage: "/public/images/greeting/aoki.jpg",
+		profileName: "青木 孝治",
+		profileTitle: "次世代がん治療推進専門家養成プラン 責任者",
+		profileDesc:
+			"日本のがん患者は急速に増加しており、がん医療はますます高度化しています。そのため、がん医療に関わる医師だけでなく、がん看護師、放射線治療技師、薬剤師など多職種連携が不可欠です。その中でも、がん専門医療のリーダーとして多職種連携を推進し、患者さん中心の質の高いがん医療を提供できる人材の養成は非常に重要です.弘前大学では、この使命を果たすために「次世代がん治療推進専門家養成プラン」を策定し、がん医療に貢献できるリーダーの育成を行っています. 本プランはがん医療のリーダーとして必要な専門的知識・技能・態度を習得し、多職種連携で患者中心のがん医療を実践できる能力の育成を目指しており, 地域のがん医療が今後さらに発展するために求められるリーダーの育成プログラムです。本プランには「地域がん医療リーダー育成コース」「小児がん専門医育成コース」「地域がん医療専門職（コーディネーター etc）育成コース」の3つのコースがあります. 市町村……",
+	},
+};
+
+document.addEventListener("DOMContentLoaded", function () {
+	const ulElement = document.querySelector(".profile");
+	const listItems = ulElement.querySelectorAll("li a");
+
+	listItems.forEach((item) => {
+		item.addEventListener("click", function (event) {
+			event.preventDefault();
+
+			const profileName = event.target.getAttribute("data-profile");
+			updateProfileContent(profileName);
+		});
+	});
+
+	function updateProfileContent(profileKey) {
+		const profile = profiles[profileKey];
+
+		const profileImage = document.querySelector(".profile-image");
+		const profileTitle = document.querySelector(".profile-title");
+		const profileName = document.querySelector(".profile-name");
+		const profileDesc = document.querySelector(".profile-desc");
+
+		profileImage.src = profile.profileImage;
+		profileTitle.textContent = profile.profileTitle;
+		profileName.textContent = profile.profileName;
+		profileDesc.textContent = profile.profileDesc;
+	}
+
+	updateProfileContent("Hirota");
+});
+</script>

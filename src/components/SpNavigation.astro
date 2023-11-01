@@ -148,23 +148,3 @@
         }
     }
 </style>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const navButton = document.querySelector(".nav-button");
-        const navWrap = document.querySelector(".nav-wrap");
-
-        navButton.addEventListener("click", function (e) {
-            e.preventDefault(); // クリック時のデフォルト動作をキャンセル
-
-            if (navButton.classList.contains("active")) {
-                navButton.classList.remove("active");
-                navWrap.classList.add("close");
-                navWrap.classList.remove("open");
-            } else {
-                navButton.classList.add("active");
-                navWrap.classList.add("open");
-                navWrap.classList.remove("close");
-            }
-        });
-    });
-</script>

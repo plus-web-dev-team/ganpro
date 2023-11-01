@@ -16,6 +16,24 @@ import MainContent from "../../components/MainContent.astro";
                 <div class="card-wrapper">
                     <div class="card">
                         <div class="card-title">
+                            <h3>養成すべき人材像</h3>
+                        </div>
+                        <div class="card-desc">
+                            <div>
+                                <p>
+                                    ①地域がん医療の現状調査から、過疎・高齢化等、取り組むべき課題を抽出し、多職種連携によるチーム医療のネットワークを構築できる人材。
+                                </p>
+                                <p>
+                                    ②予防医療からゲノム医療そして終末期医療までの幅広い臨床過程を患者/家族の視点からコーディネートできる人材。
+                                </p>
+                                <p>
+                                    ③地域がん医療のリーダーとなり、次世代の医療人の育成ができる人材。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">
                             <h3>修了要件・履修方法</h3>
                         </div>
                         <div class="card-desc">
@@ -146,6 +164,21 @@ import MainContent from "../../components/MainContent.astro";
                             </div>
                         </div>
                     </div>
+                    <div class="card">
+                        <div class="card-title">
+                            <h3>受入目標人数設定の考え方・根拠</h3>
+                        </div>
+                        <div class="card-desc">
+                            <div>
+                                <p>
+                                    青森県内の3つのがん拠点病院にがん薬物療法専門医を最低1人ずつ、がん治療認定医を最低2人ずつ配置することを目標にすると、現在県内のがん薬物療法専門医数が4人のため今後5年間で5人養成する。また、過去の大学院志願者数及び入学ニーズ調査から毎年度3人前後の志願者が見込まれるため、受入れ目標人数を3人と設定。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="look">
+                    <a href="/cource">養成コース一覧へ</a>
                 </div>
             </div>
         </div>
@@ -155,8 +188,20 @@ import MainContent from "../../components/MainContent.astro";
     </main>
     <Icons />
 </Layout>
-
 <style lang="scss">
+    .look {
+        display: flex;
+        justify-content: center;
+        padding: 2rem;
+        a {
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: 500;
+            text-decoration: none;
+            background-color: var(--font-color);
+            color: #fff;
+        }
+    }
     .cource-desc {
         max-width: 1280px;
         margin: 0 auto;
@@ -177,7 +222,7 @@ import MainContent from "../../components/MainContent.astro";
             justify-content: space-between;
             flex-direction: row;
             flex-wrap: wrap;
-            gap: 3%;
+            gap: 1%;
             width: 100%;
             @media (max-width: 768px) {
                 flex-direction: row;
@@ -188,6 +233,7 @@ import MainContent from "../../components/MainContent.astro";
                 border-radius: 10px;
                 flex: 1 1 300px;
                 font-size: 14px;
+                margin-bottom: 1%;
                 .card-title {
                     background-color: var(--secondary-color);
                     color: #fff;

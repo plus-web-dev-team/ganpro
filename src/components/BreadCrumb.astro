@@ -23,11 +23,3 @@
         }
     }
 </style>
-<script is:inline>
-const pageTitle = document.title;
-const titleParts = pageTitle.split("|");
-const rightPart = titleParts.length > 1 ? titleParts[1].trim() : pageTitle;
-const currentPageElement = document.getElementById("currentPage");
-
-currentPageElement.textContent = rightPart;
-</script>
