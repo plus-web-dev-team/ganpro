@@ -32,3 +32,20 @@ import MainContent from "../components/MainContent.astro";
         }
     }
 </style>
+<script
+    is:inline
+    src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"
+></script>
+<script is:inline>
+// カレンダーページ FullCalendar
+document.addEventListener("DOMContentLoaded", () => {
+    const calendarEl = document.getElementById("calendar");
+    if (calendarEl) {
+        const calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: "dayGridMonth",
+            locale: "ja",
+        });
+        calendar.render();
+    }
+});
+</script>
