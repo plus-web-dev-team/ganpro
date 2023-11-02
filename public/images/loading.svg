@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_2" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 83.33 83.33">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #574b46;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        fill: #ed8ea0;
+      }
+    </style>
+  </defs>
+  <g id="_文字" data-name="文字">
+    <g>
+      <path class="cls-3" d="m41.67,0C18.65,0,0,18.65,0,41.67s18.65,41.67,41.67,41.67c23.01,0,41.67-18.65,41.67-41.67S64.68,0,41.67,0Z"/>
+      <circle class="cls-2" cx="41.67" cy="41.67" r="6.67"/>
+      <g>
+        <ellipse class="cls-1" cx="26.39" cy="30.21" rx="4.17" ry="6.67"/>
+        <ellipse class="cls-1" cx="56.94" cy="30.21" rx="4.17" ry="6.67"/>
+        <path class="cls-1" d="m55,57.92c0,7.36-5.97,13.33-13.33,13.33s-13.33-5.97-13.33-13.33h26.67Z"/>
+      </g>
+    </g>
+  </g>
+</svg>
