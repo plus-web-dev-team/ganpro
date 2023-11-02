@@ -1,0 +1,139 @@
+<div class="loading-content js-loading">
+    <p class="loading-text">Loading</p>
+</div>
+<section class="main-content">
+    <p class="main-text">ここはコンテンツ領域です</p>
+    <ul class="gallery-list">
+        <li class="gallery-list-item">
+            <img
+                src="https://picsum.photos/id/474/400/247/"
+                alt=""
+                width="400"
+                height="247"
+            />
+        </li>
+        <li class="gallery-list-item">
+            <img
+                src="https://picsum.photos/id/402/400/247/"
+                alt=""
+                width="400"
+                height="247"
+            />
+        </li>
+        <li class="gallery-list-item">
+            <img
+                src="https://picsum.photos/id/563/400/247/"
+                alt=""
+                width="400"
+                height="247"
+            />
+        </li>
+        <li class="gallery-list-item">
+            <img
+                src="https://picsum.photos/id/320/400/247/"
+                alt=""
+                width="400"
+                height="247"
+            />
+        </li>
+        <li class="gallery-list-item">
+            <img
+                src="https://picsum.photos/id/352/400/247/"
+                alt=""
+                width="400"
+                height="247"
+            />
+        </li>
+        <li class="gallery-list-item">
+            <img
+                src="https://picsum.photos/id/351/400/247/"
+                alt=""
+                width="400"
+                height="247"
+            />
+        </li>
+        <li class="gallery-list-item">
+            <img
+                src="https://picsum.photos/id/379/400/247/"
+                alt=""
+                width="400"
+                height="247"
+            />
+        </li>
+        <li class="gallery-list-item">
+            <img
+                src="https://picsum.photos/id/405/400/247/"
+                alt=""
+                width="400"
+                height="247"
+            />
+        </li>
+        <li class="gallery-list-item">
+            <img
+                src="https://picsum.photos/id/519/400/247/"
+                alt=""
+                width="400"
+                height="247"
+            />
+        </li>
+    </ul>
+</section>
+
+<style lang="scss">
+    .loading-content {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background-color: #d9e8e7;
+        transition: all ease-in-out 1s;
+        &.js-loaded {
+            opacity: 0;
+            visibility: hidden;
+        }
+        .loading-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #00a5a0;
+            font-size: 30px;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+            animation: loadingAnimation 1s infinite;
+            @keyframes loadingAnimation {
+                0% {
+                    transform: translate(-50%, -50%) translateY(0);
+                }
+                50% {
+                    transform: translate(-50%, -50%) translateY(-20px);
+                }
+                100% {
+                    transform: translate(-50%, -50%) translateY(0);
+                }
+            }
+        }
+    }
+    .main-content {
+        padding: 20px;
+        .gallery-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        .gallery-list-item {
+            width: calc((100% - 20px) / 3);
+            img {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+        }
+        .main-text {
+            margin: 0 0 10px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+        }
+    }
+</style>
