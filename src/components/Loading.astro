@@ -1,5 +1,7 @@
-<div class="loading-content js-loading">
-    <p class="loading-text"><img src="../images/loading.webp" alt="" /></p>
+<div class="loading-content is-loading">
+    <p class="loading-img">
+        <img src="../images/loading.webp" alt="ローディング" />
+    </p>
 </div>
 
 <style lang="scss">
@@ -11,20 +13,19 @@
         top: 0;
         background-color: var(--primary-color);
         transition: all ease-in-out 1s;
-        &.js-loaded {
+        &.is-loaded {
             opacity: 0;
             visibility: hidden;
         }
-        .loading-text {
+        .loading-img {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             color: var(--secondary-color);
-            font-size: 30px;
-            font-weight: bold;
-            letter-spacing: 0.05em;
             animation: loadingAnimation 1s infinite;
+            width: calc(100vw / 5);
+            margin: 0 auto;
             @keyframes loadingAnimation {
                 0% {
                     transform: translate(-50%, -50%) translateY(0);
@@ -40,8 +41,8 @@
     }
 </style>
 <script is:inline>
-    const loading = document.querySelector(".js-loading");
+    const loading = document.querySelector(".is-loading");
     window.addEventListener("load", () => {
-        loading.classList.add("js-loaded");
+        loading.classList.add("is-loaded");
     });
 </script>
