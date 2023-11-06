@@ -42,8 +42,6 @@
 <script is:inline>
     const loading = document.querySelector(".js-loading");
     window.addEventListener("load", () => {
-        setTimeout(() => {
-            loading.classList.add("js-loaded");
-        }, 500); // 0.5秒遅延
+        loading.classList.add("js-loaded");
     });
 </script>
