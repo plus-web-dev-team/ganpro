@@ -8,6 +8,7 @@
         width: 100vw;
         height: 100vh;
         z-index: 999;
+        top: 0;
         background-color: var(--primary-color);
         transition: all ease-in-out 1s;
         &.js-loaded {
@@ -62,8 +63,8 @@
     }
 </style>
 <script is:inline>
-const loading = document.querySelector(".js-loading");
-window.addEventListener("load", () => {
-    loading.classList.add("js-loaded");
-});
+    const loading = document.querySelector(".js-loading");
+    window.addEventListener("load", () => {
+        loading.classList.add("js-loaded");
+    });
 </script>
