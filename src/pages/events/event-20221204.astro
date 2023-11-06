@@ -115,38 +115,41 @@ import MainContent from "../../components/MainContent.astro";
             color: #fff;
         }
     }
-    .event-desc {
-        background-color: #fff;
-        border-radius: 20px;
-        max-width: 762px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        flex-direction: column;
-        padding: 3.12%;
-        h2 {
-            font-size: clamp(1rem, 0.741rem + 1.1vw, 1.625rem);
-            font-weight: 300;
-            text-align: center;
-            color: var(--secondary-color);
-            margin-bottom: 2%;
-            align-self: center;
-        }
-        table {
-            width: 100%;
-            td {
-                vertical-align: top;
+    .event-wrapper {
+        padding: 6.12%;
+        .event-desc {
+            background-color: #fff;
+            border-radius: 20px;
+            max-width: 762px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            padding: 3.12%;
+            h2 {
+                font-size: clamp(1rem, 0.741rem + 1.1vw, 1.625rem);
+                font-weight: 300;
+                text-align: center;
+                color: var(--secondary-color);
+                margin-bottom: 2%;
+                align-self: center;
             }
-            td:nth-of-type(1) {
-                width: 15%;
-                font-weight: bold;
-            }
-            td:nth-of-type(2) {
-                width: fit-content;
-            }
-            span {
-                font-weight: 500;
+            table {
+                width: 100%;
+                td {
+                    vertical-align: top;
+                }
+                td:nth-of-type(1) {
+                    width: 15%;
+                    font-weight: bold;
+                }
+                td:nth-of-type(2) {
+                    width: fit-content;
+                }
+                span {
+                    font-weight: 500;
+                }
             }
         }
     }
