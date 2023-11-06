@@ -38,33 +38,12 @@
             }
         }
     }
-    .main-content {
-        padding: 20px;
-        .gallery-list {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
-        }
-        .gallery-list-item {
-            width: calc((100% - 20px) / 3);
-            img {
-                display: block;
-                width: 100%;
-                height: auto;
-            }
-        }
-        .main-text {
-            margin: 0 0 10px;
-            font-size: 18px;
-            font-weight: bold;
-            text-align: center;
-        }
-    }
 </style>
 <script is:inline>
     const loading = document.querySelector(".js-loading");
     window.addEventListener("load", () => {
-        loading.classList.add("js-loaded");
+        setTimeout(() => {
+            loading.classList.add("js-loaded");
+        }, 500); // 0.5秒遅延
     });
 </script>
