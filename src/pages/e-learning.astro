@@ -1,0 +1,147 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Icons from "../components/Icons.astro";
+import BreadCrumb from "../components/BreadCrumb.astro";
+import MainContent from "../components/MainContent.astro";
+---
+
+<Layout title="弘前大学がんプロ | Eラーニング">
+    <main>
+        <BreadCrumb />
+        <div class="bg-primary e-leaning-wrapper">
+            <div class="e-leaning-desc">
+                <h2>インテンシブコース履修者専用</h2>
+                <div class="card-wrapper">
+                    <div class="card">
+                        <div class="card-title">
+                            <h3>Eラーニングはこちらから</h3>
+                        </div>
+                        <div class="card-desc">
+                            <div>
+                                <p>※講義は、別サイトへ移動します。</p>
+                                <p>
+                                    読み込みに時間がかかります。ご了承ください。
+                                </p>
+                            </div>
+                            <div>
+                                <!--タグはここから-->
+                                <table
+                                    border="0"
+                                    cellspacing="0"
+                                    cellpadding="0"
+                                >
+                                    <tr
+                                        ><td align="center"
+                                            ><img
+                                                src="http://www.rays-counter.com/d1273_f6_002/6555b32de6604/"
+                                                alt="アクセスカウンター"
+                                                border="0"
+                                            /></td
+                                        ></tr
+                                    >
+                                </table><!--ここまで-->
+                            </div>
+                            <div class="card-link">
+                                <a href="/cource/cource-1">ログイン画面</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-primary repaet-image">
+            <MainContent />
+        </div>
+    </main>
+    <Icons />
+</Layout>
+
+<style lang="scss">
+    .e-leaning-desc {
+        max-width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 6.12%;
+        h2 {
+            font-size: clamp(2rem, 1.171rem + 3.54vw, 4rem);
+            font-weight: 300;
+            text-align: center;
+            color: var(--secondary-color);
+            margin-bottom: 2%;
+        }
+        .card-wrapper {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 1%;
+            @media (max-width: 768px) {
+                flex-direction: row;
+                gap: 2%;
+            }
+            .card {
+                background-color: #fff;
+                border-radius: 10px;
+                flex: 1 1 300px;
+                font-size: 14px;
+                height: 100%;
+                margin-bottom: 20px;
+                .card-title {
+                    background-color: var(--secondary-color);
+                    color: #fff;
+                    display: flex;
+                    align-items: cetner;
+                    justify-content: center;
+                    flex-direction: column;
+                    padding: 20px;
+                    border-radius: 10px 10px 0 0;
+                    h3 {
+                        text-align: center;
+                    }
+                }
+                .card-desc {
+                    padding: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    div {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 0;
+                        font-weight: 500;
+                    }
+                }
+                a {
+                    text-decoration: none;
+                }
+                div {
+                    display: flex;
+                    row-gap: 16px;
+                }
+                @media (max-width: 768px) {
+                    width: 48%;
+                }
+                .card-link {
+                    display: flex;
+                    flex-direction: row !important;
+                    width: 100%;
+                    gap: 20px !important;
+                    margin-top: 20px;
+                    justify-content: center;
+                    a {
+                        padding: 10px 20px;
+                        border-radius: 5px;
+                        font-weight: 500;
+                        text-decoration: none;
+                        background-color: var(--font-color);
+                        color: #fff;
+                        width: 45%;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+</style>
