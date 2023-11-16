@@ -26,23 +26,12 @@ import MainContent from "../components/MainContent.astro";
                                     読み込みに時間がかかります。ご了承ください。
                                 </p>
                             </div>
-                            <div>
-                                <!--タグはここから-->
-                                <table
-                                    border="0"
-                                    cellspacing="0"
-                                    cellpadding="0"
-                                >
-                                    <tr
-                                        ><td align="center"
-                                            ><img
-                                                src="http://www.rays-counter.com/d1273_f6_002/6555b32de6604/"
-                                                alt="アクセスカウンター"
-                                                border="0"
-                                            /></td
-                                        ></tr
-                                    >
-                                </table><!--ここまで-->
+                            <div class="card-counter">
+                                <img
+                                    src="https://www.f-counter.net/j/63/1700122266/"
+                                    alt="アクセスカウンター"
+                                    width="88"
+                                />
                             </div>
                             <div class="card-link">
                                 <a
@@ -117,6 +106,11 @@ import MainContent from "../components/MainContent.astro";
                         flex-direction: column;
                         gap: 0;
                         font-weight: 500;
+                    }
+                    .card-counter {
+                        img {
+                            margin: 0 auto;
+                        }
                     }
                 }
                 a {
