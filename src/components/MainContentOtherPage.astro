@@ -1,0 +1,444 @@
+---
+import Carousel from "../components/Carousel.astro";
+---
+
+<div class="main-content">
+    <div class="column-right">
+        <article>
+            <div class="event">
+                <h2>講座・イベント</h2>
+                <Carousel />
+            </div>
+        </article>
+        <article>
+            <div class="cource">
+                <h2>養成コース</h2>
+                <div>
+                    <a href="/cource/cource-1"
+                        >地域がん医療<br />次世代リーダー育成コース</a
+                    >
+                    <a href="/cource/cource-2"
+                        >地域がん医療を推進する<br
+                        />次世代病理診断医育成コース</a
+                    >
+                    <a href="/cource/cource-3"
+                        >地域がん医療<br />次世代放射線治療医育成コース</a
+                    >
+                </div>
+            </div>
+        </article>
+        <article id="partner">
+            <div class="partner">
+                <h2>連携大学</h2>
+                <ul>
+                    <li>
+                        <a
+                            href="http://www.ganpro.med.tohoku.ac.jp/index.html"
+                            target="_blank">東北大学</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="http://www.med.akita-u.ac.jp/~ganpro29/"
+                            target="_blank">秋田大学</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="https://www.id.yamagata-u.ac.jp/ganpro/"
+                            target="_blank">山形大学</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="https://www.med.niigata-u.ac.jp/gan/"
+                            target="_blank">新潟大学</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="https://www.fmu.ac.jp/byoin/25syuyocenter/08professional/index.html"
+                            target="_blank">福島県立医科大学</a
+                        >
+                    </li>
+                </ul>
+            </div>
+        </article>
+        <article>
+            <div class="relevance">
+                <h2>弘前大学関連</h2>
+                <div class="related">
+                    <div>
+                        <a
+                            href="http://www.med.hirosaki-u.ac.jp/~oncology/"
+                            target="_blank"
+                        >
+                            <img
+                                src="/images/face-right.svg"
+                                alt="腫瘍内科学講座"
+                            />
+                            <p>腫瘍内科学講座</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a
+                            href="http://www.med.hirosaki-u.ac.jp/~anatopathol/"
+                            target="_blank"
+                        >
+                            <img
+                                src="/images/face-center_smallSmile.svg"
+                                alt="病理診断学講座"
+                            />
+                            <p>病理診断学講座</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a
+                            href="http://www.med.hirosaki-u.ac.jp/~radio/"
+                            target="_blank"
+                        >
+                            <img
+                                src="/images/face-center_smile.svg"
+                                alt="放射線腫瘍学講座、放射線診断学講座"
+                            />
+                            <p>放射線腫瘍学講座<br />放射線診断学講座</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a
+                            href="https://www.med.hirosaki-u.ac.jp/~cancer-c/index.html"
+                            target="_blank"
+                        >
+                            <img
+                                src="/images/face-left.svg"
+                                alt="医学部附属病院腫瘍センター"
+                            />
+                            <p>医学部附属病院<br />腫瘍センター</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article>
+            <div class="program">
+                <img src="/images/logo.svg" alt="" />
+                <div class="address">
+                    <div>
+                        <img src="/images/logo-univ.svg" alt="弘前大学ロゴ" />
+                        <h3>弘前大学 大学院 医学研究科</h3>
+                    </div>
+                    <p>東北広域次世代がんプロ養成プラン 弘前大学事務局</p>
+                    <address>
+                        <p>〒036-8562 青森県弘前市在府町5番地</p>
+                        <p>TEL：0172-39-5410</p>
+                        <p>FAX：0172-39-5209</p>
+                        <a href="mailto:ganpro@hirosaki-u.ac.jp"
+                            >メール：ganpro@hirosaki-u.ac.jp</a
+                        >
+                    </address>
+                </div>
+                <p>
+                    文部科学省 令和5年度
+                    大学教育再生戦略推進費「次世代のがんプロフェッショナル養成プラン」採択プログラム
+                </p>
+                <p class="sitename">東北広域次世代がんプロ養成プラン</p>
+            </div>
+        </article>
+        <article></article>
+    </div>
+</div>
+<style lang="scss">
+    .main-content {
+        display: flex;
+        flex-flow: row wrap;
+        gap: 4%;
+        padding: 3.12% 6.25% 7.71875%;
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+
+    // グローバル設定
+    h2 {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    // 右カラム
+    .column-right {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 6%;
+    }
+
+    @media (max-width: 1279px) {
+        .column-left {
+            width: 100%;
+        }
+        .column-righ t {
+            width: 100%;
+            gap: 5%;
+            article {
+                width: 45%;
+            }
+            @media (max-width: 767px) {
+                article {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    // article全体の設定
+    article {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 auto;
+        width: 400px;
+        @media (max-width: 768px) {
+            width: 100%;
+            margin-bottom: 24px;
+        }
+        h2 {
+            color: var(--secondary-color);
+            font-weight: 300;
+        }
+        h3 {
+            font-weight: 500;
+        }
+        @media (max-width: 375px) {
+            margin-top: 40px;
+        }
+    }
+
+    article:nth-of-type(2) {
+        align-self: flex-start;
+    }
+
+    // article左「次世代のがんプロフェッショナル養成プラン」採択プログラム
+    .plan {
+        p:nth-of-type(1) {
+            font-size: 10px;
+            margin-bottom: 24px;
+            @media (max-width: 1279px) {
+                font-size: 16px;
+                text-align: center;
+            }
+        }
+        h2 {
+            font-size: 48px;
+            line-height: 1.2;
+            margin-bottom: 96px;
+            font-weight: 300;
+            letter-spacing: 10px;
+            text-align: justify;
+            @media (max-width: 1279px) {
+                font-size: clamp(2.25rem, 0.902rem + 5.75vw, 5.5rem);
+                letter-spacing: 0;
+                text-align: center;
+            }
+        }
+        h3 {
+            text-align: center;
+            letter-spacing: 20px;
+            margin-bottom: 30px;
+        }
+        p:nth-of-type(2) {
+            height: 300px;
+            overflow: scroll;
+            line-height: 1.8;
+            @media (max-width: 1279px) {
+                width: 80%;
+                margin: 0 auto;
+                margin-bottom: 40px;
+            }
+            @media (max-width: 375px) {
+                width: 100%;
+            }
+        }
+    }
+
+    // article左「養成する人材」
+    .person {
+        h3 {
+            text-align: center;
+            letter-spacing: 20px;
+            margin-top: 60px;
+            margin-bottom: 30px;
+        }
+        p {
+            height: 300px;
+            overflow: scroll;
+            line-height: 1.8;
+            @media (max-width: 1279px) {
+                width: 80%;
+                margin: 0 auto;
+                margin-bottom: 40px;
+            }
+            @media (max-width: 375px) {
+                width: 100%;
+            }
+        }
+    }
+
+    // 講座・イベント
+    .event {
+        h2 {
+            font-size: 32px;
+            text-align: center;
+            margin-bottom: 24px;
+        }
+    }
+
+    // 連携大学
+    #partner {
+        align-self: center;
+    }
+    .partner {
+        a {
+            text-decoration: none;
+            &:hover {
+                color: var(--secondary-color);
+                transition: all 0.3s ease;
+            }
+        }
+        ul {
+            font-size: 24px;
+            max-width: 100%;
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 25px auto;
+            row-gap: 8px;
+            li {
+                flex: 1 1 auto;
+                width: 50%;
+            }
+            li:before {
+                content: "";
+                width: 1em;
+                height: 1em;
+                background-image: url("/images/list-style.svg");
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: 5px;
+            }
+        }
+    }
+
+    // article中の下段「次世代のがんプロフェッショナル養成プラン」採択プログラム
+    .program {
+        @media (max-width: 375px) {
+            img {
+                width: 80%;
+                margin: 0 auto;
+            }
+        }
+        p:nth-of-type(1) {
+            margin: 14px 0 10px;
+            font-size: 16px;
+        }
+        .sitename {
+            font-size: 21px;
+            @media (max-width: 375px) {
+                font-size: 16px;
+                text-align: center;
+            }
+            font-weight: 500;
+        }
+    }
+
+    // 養成コース
+    .cource {
+        display: flex;
+        flex-direction: column;
+        h2 {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            background-color: var(--secondary-color);
+            border-radius: 10px;
+            color: #fff;
+            width: 100%;
+            padding: 25px;
+            @media (max-width: 375px) {
+                width: 60%;
+                margin: 0 auto;
+                padding: 16px;
+            }
+            text-align: center;
+            font-size: clamp(0.75rem, 0.659rem + 0.45vw, 1rem);
+        }
+        div {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+    }
+
+    // 弘前大学関連
+    .relevance {
+        h2 {
+            text-align: center;
+            font-size: 28px;
+        }
+        // 講座一覧
+        .related {
+            display: flex;
+            flex-wrap: wrap;
+            text-align: center;
+            a {
+                text-decoration: none;
+                &:hover {
+                    color: var(--secondary-color);
+                    transition: all 0.3s ease;
+                }
+            }
+            div {
+                flex-basis: 50%;
+                margin-bottom: 20px;
+                img {
+                    height: 100px;
+                    margin: 0 auto;
+                    @media (max-width: 375px) {
+                        width: 30%;
+                        height: auto;
+                    }
+                }
+            }
+            p {
+                margin-top: 8px;
+                font-weight: 500;
+            }
+        }
+    }
+
+    // 基本情報
+    .address {
+        p {
+            font-style: normal;
+        }
+        div {
+            margin: 16px 0;
+            display: flex;
+            align-items: center;
+        }
+        img {
+            width: 40px;
+            margin-right: 8px;
+        }
+        a {
+            text-decoration: none;
+            font-style: normal;
+        }
+    }
+</style>
