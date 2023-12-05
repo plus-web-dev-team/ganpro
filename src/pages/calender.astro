@@ -36,16 +36,20 @@ import MainContent from "../components/MainContent.astro";
     is:inline
     src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"
 ></script>
+<script
+    is:inline
+    src="https://cdn.jsdelivr.net/npm/@fullcalendar/google-calendar@6.1.6/index.global.min.js"
+></script>
 <script is:inline>
-// カレンダーページ FullCalendar
-document.addEventListener("DOMContentLoaded", () => {
-    const calendarEl = document.getElementById("calendar");
-    if (calendarEl) {
-        const calendar = new FullCalendar.Calendar(calendarEl, {
-            initialView: "dayGridMonth",
-            locale: "ja",
+    // カレンダーページ FullCalendar
+    document.addEventListener("DOMContentLoaded", () => {
+        const calendarEl = document.getElementById("calendar");
+        let calendar = new FullCalendar.Calendar(calendarEl, {
+            googleCalendarApiKey: "AIzaSyDOZ3METTaI9ZcH0_plw_lasjZ6hyGDTQM",
+            events: {
+                googleCalendarId: "ganprohirosaki@gmail.com",
+            },
         });
         calendar.render();
-    }
-});
+    });
 </script>
