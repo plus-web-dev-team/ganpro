@@ -37,9 +37,16 @@ import Carousel from "../components/Carousel.astro";
             <div class="cource">
                 <h2>養成コース</h2>
                 <div>
-                    <a href="/cource/cource-1">次世代リーダー</a>
-                    <a href="/cource/cource-2">次世代病理診断医</a>
-                    <a href="/cource/cource-3">次世代放射線治療医</a>
+                    <a href="/cource/cource-1"
+                        >地域がん医療<br />次世代リーダー育成コース</a
+                    >
+                    <a href="/cource/cource-2"
+                        >地域がん医療を推進する<br
+                        />次世代病理診断医育成コース</a
+                    >
+                    <a href="/cource/cource-3"
+                        >地域がん医療<br />次世代放射線治療医育成コース</a
+                    >
                 </div>
             </div>
         </article>
@@ -67,14 +74,14 @@ import Carousel from "../components/Carousel.astro";
                     </li>
                     <li>
                         <a
-                            href="https://www.fmu.ac.jp/byoin/25syuyocenter/08professional/index.html"
-                            target="_blank">福島県立医科大学</a
+                            href="https://www.med.niigata-u.ac.jp/gan/"
+                            target="_blank">新潟大学</a
                         >
                     </li>
                     <li>
                         <a
-                            href="https://www.med.niigata-u.ac.jp/gan/"
-                            target="_blank">新潟大学</a
+                            href="https://www.fmu.ac.jp/byoin/25syuyocenter/08professional/index.html"
+                            target="_blank">福島県立医科大学</a
                         >
                     </li>
                 </ul>
@@ -138,29 +145,29 @@ import Carousel from "../components/Carousel.astro";
         <article>
             <div class="program">
                 <img src="/images/logo.svg" alt="" />
-                <p>
-                    文部科学省 令和5年度 大学教育再生戦略推進費<br />
-                     「次世代のがんプロフェッショナル養成プラン」採択プログラム
-                </p>
-                <p>東北広域次世代がんプロ養成プラン</p>
-            </div>
-        </article>
-        <article>
-            <div class="address">
-                <div>
-                    <img src="/images/logo-univ.svg" alt="弘前大学ロゴ" />
-                    <h3>弘前大学 大学院 医学研究科</h3>
+                <div class="address">
+                    <div>
+                        <img src="/images/logo-univ.svg" alt="弘前大学ロゴ" />
+                        <h3>弘前大学 大学院 医学研究科</h3>
+                    </div>
+                    <p>東北広域次世代がんプロ養成プラン</p>
+                    <address>
+                        <p>〒036-8562 青森県弘前市在府町5番地</p>
+                        <p>TEL：0172-39-5410</p>
+                        <p>FAX：0172-39-5209</p>
+                        <a href="mailto:ganpro@hirosaki-u.ac.jp"
+                            >メール：ganpro@hirosaki-u.ac.jp</a
+                        >
+                    </address>
                 </div>
-                <address>
-                    <p>〒036-8562 青森県弘前市在府町5番地</p>
-                    <p>TEL：0172-39-5410</p>
-                    <p>FAX：0172-39-5209</p>
-                    <a href="mailto:ganpro@hirosaki-u.ac.jp"
-                        >メール：ganpro@hirosaki-u.ac.jp</a
-                    >
-                </address>
+                <p>
+                    文部科学省 令和5年度
+                    大学教育再生戦略推進費「次世代のがんプロフェッショナル養成プラン」採択プログラム
+                </p>
+                <p class="sitename">東北広域次世代がんプロ養成プラン</p>
             </div>
         </article>
+        <article></article>
     </div>
 </div>
 <style lang="scss">
@@ -336,7 +343,7 @@ import Carousel from "../components/Carousel.astro";
             }
         }
         ul {
-            font-size: 14px;
+            font-size: 24px;
             max-width: 100%;
             list-style-type: none;
             padding: 0;
@@ -373,9 +380,9 @@ import Carousel from "../components/Carousel.astro";
         }
         p:nth-of-type(1) {
             margin: 14px 0 10px;
-            font-size: 12px;
+            font-size: 16px;
         }
-        p:nth-of-type(2) {
+        .sitename {
             font-size: 21px;
             @media (max-width: 375px) {
                 font-size: 16px;
@@ -408,8 +415,8 @@ import Carousel from "../components/Carousel.astro";
                 margin: 0 auto;
                 padding: 16px;
             }
-
-            font-size: clamp(1rem, 0.689rem + 1.33vw, 1.75rem);
+            text-align: center;
+            font-size: clamp(0.75rem, 0.659rem + 0.45vw, 1rem);
         }
         div {
             display: flex;
@@ -423,7 +430,7 @@ import Carousel from "../components/Carousel.astro";
         h2 {
             text-align: center;
             font-size: 28px;
-            margin-bottom: 14px;
+            margin-top: 5em;
         }
         // 講座一覧
         .related {
