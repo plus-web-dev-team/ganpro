@@ -1,6 +1,9 @@
 <a href="/">
     <img src="/images/logo.svg" alt="がんプロ" />
-    <h1>弘前大学<span>がん</span>プロ</h1>
+    <div>
+        <h1>弘前大学<span>がん</span>プロ</h1>
+        <p class="sub">東北広域次世代がんプロ養成プラン</p>
+    </div>
 </a>
 <ul>
     <li><a href="/">ホーム</a></li>
@@ -62,6 +65,7 @@
         text-decoration: none;
         justify-content: flex-start;
         align-items: center;
+        flex-wrap: wrap;
     }
     img {
         width: 10rem;
@@ -74,5 +78,14 @@
         h1 {
             font-size: 1rem;
         }
+    }
+    .spacer {
+        width: 100%;
+    }
+    .sub {
+        margin-top: 4px;
+        font-size: 10px;
+        text-align: justify;
+        text-justify: inter-character;
     }
 </style>
