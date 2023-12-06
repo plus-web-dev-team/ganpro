@@ -168,29 +168,31 @@ const { title } = Astro.props;
 	if (currentPageElement) {
 		currentPageElement.textContent = rightPart;
 	}
-
+</script>
+<script is:inline>
 	// カルーセル
-	const pagePath = window.location.pathname;
-
 	const initializeSwiper = true;
 
-	if (pagePath !== "/" && initializeSwiper) {
-		const swiper = new Swiper(".swiper", {
-			loop: true,
-			speed: 1500,
-			slidesPerView: 1.5,
-			spaceBetween: 30,
-			centeredSlides: true,
-			autoplay: {
-				delay: 1000,
-				disableOnInteraction: false,
-			},
-			navigation: {
-				nextEl: ".swiper-button-next",
-				prevEl: ".swiper-button-prev",
-			},
+	if (initializeSwiper) {
+		document.addEventListener("DOMContentLoaded", function () {
+			const swiper = new Swiper(".swiper", {
+				loop: true,
+				speed: 1500,
+				slidesPerView: 1.5,
+				spaceBetween: 30,
+				centeredSlides: true,
+				autoplay: {
+					delay: 1000,
+					disableOnInteraction: false,
+				},
+				navigation: {
+					nextEl: ".swiper-button-next",
+					prevEl: ".swiper-button-prev",
+				},
+			});
 		});
 	}
+
 	document.addEventListener("DOMContentLoaded", function () {
 		const navButton = document.querySelector(".nav-button");
 		const navWrap = document.querySelector(".nav-wrap");
