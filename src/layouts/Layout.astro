@@ -210,3 +210,9 @@ const { title } = Astro.props;
 		});
 	});
 </script>
+<script is:inline>
+	const loading = document.querySelector(".is-loading");
+	window.addEventListener("load", () => {
+		loading.classList.add("is-loaded");
+	});
+</script>
