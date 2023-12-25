@@ -1,0 +1,124 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Icons from "../../components/Icons.astro";
+import BreadCrumb from "../../components/BreadCrumb.astro";
+import MainContent from "../../components/MainContent.astro";
+---
+
+<Layout title="活動報告「みんなで知りたいがんのこと・かんのこと展」">
+    <main>
+        <BreadCrumb />
+        <div class="bg-primary event-wrapper">
+            <div class="event-desc">
+                <h2>活動報告「みんなで知りたいがんのこと・かんのこと展」</h2>
+                <div>
+                    <p>
+                        多くの市民の皆様にご参加いただきありがとうございました。
+                    </p>
+                    <div class="imgFlex">
+                        <img src="/images/report/20230910/img01.webp" alt="" />
+                        <img src="/images/report/20230910/img02.webp" alt="" />
+                        <img src="/images/report/20230910/img03.webp" alt="" />
+                        <img src="/images/report/20230910/img04.webp" alt="" />
+                        <img src="/images/report/20230910/img05.webp" alt="" />
+                        <img src="/images/report/20230910/img06.webp" alt="" />
+                    </div>
+                </div>
+            </div>
+            <div class="look">
+                <a href="/events">講座・イベント一覧へ</a>
+            </div>
+        </div>
+        <div class="bg-primary repaet-image">
+            <MainContent />
+        </div>
+    </main>
+    <Icons />
+</Layout>
+<style lang="scss">
+    .look {
+        display: flex;
+        justify-content: center;
+        padding: 2rem;
+        a {
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: 500;
+            text-decoration: none;
+            background-color: var(--font-color);
+            color: #fff;
+        }
+    }
+    .link {
+        display: flex;
+        width: 100%;
+        gap: 20px;
+        margin-top: 20px;
+        justify-content: center;
+        a {
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: 500;
+            text-decoration: none;
+        }
+        a:nth-of-type(1) {
+            background-color: var(--primary-color);
+            color: #fff;
+        }
+        a:nth-of-type(2) {
+            background-color: var(--font-color);
+            color: #fff;
+        }
+    }
+    .event-wrapper {
+        padding: 6.12%;
+        .event-desc {
+            background-color: #fff;
+            border-radius: 20px;
+            max-width: 762px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            padding: 3.12%;
+            h2 {
+                font-size: clamp(1rem, 0.741rem + 1.1vw, 1.625rem);
+                font-weight: 300;
+                text-align: center;
+                color: var(--secondary-color);
+                margin-bottom: 2%;
+                align-self: center;
+            }
+            table {
+                width: 100%;
+                td {
+                    vertical-align: top;
+                }
+                td:nth-of-type(1) {
+                    width: 15%;
+                    font-weight: bold;
+                }
+                td:nth-of-type(2) {
+                    width: fit-content;
+                }
+                span {
+                    font-weight: 500;
+                }
+            }
+            .imgFlex {
+                margin-top: 16px;
+                display: flex;
+                flex: 0 1 48%;
+                flex-wrap: wrap;
+                gap: 2%;
+                justify-content: center;
+                align-items: center;
+                img {
+                    width: 48%;
+                    margin-bottom: 2%;
+                }
+            }
+        }
+    }
+</style>

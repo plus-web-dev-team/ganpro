@@ -13,6 +13,45 @@ import MainContentOtherPage from "../components/MainContentOtherPage.astro";
                 <h2>講座・イベント</h2>
                 <div class="card-wrapper">
                     <div class="card">
+                        <a href="/events/event-20231203">
+                            <img src="/images/slides/slide-5.webp" alt="" />
+                            <div>
+                                <p>開催日：</p>
+                                <p>2023年12月03日（日）</p>
+                            </div>
+                            <div>
+                                <p>開催時間：</p>
+                                <p>13:00〜15:30</p>
+                            </div>
+
+                            <div>
+                                <p>定員：</p>
+                                <p>80名</p>
+                            </div>
+                            <div>
+                                <p>申込方法：</p>
+                                <p>2023年11月7日（火）から</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="/events/event-20230910">
+                            <img src="/images/slides/slide-4.webp" alt="" />
+                            <div>
+                                <p>開催日：</p>
+                                <p>2023年09月10日（日）</p>
+                            </div>
+                            <div>
+                                <p>開催時間：</p>
+                                <p>10:00〜15:00</p>
+                            </div>
+                            <div>
+                                <p>申込方法：</p>
+                                <p>申込不要</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
                         <a href="/events/event-20221204">
                             <img src="/images/slides/slide-1.webp" alt="" />
                             <div>
@@ -45,12 +84,8 @@ import MainContentOtherPage from "../components/MainContentOtherPage.astro";
                                 <p>13:30〜15:55</p>
                             </div>
                             <div>
-                                <p>定員：</p>
-                                <p>500名</p>
-                            </div>
-                            <div>
                                 <p>申込方法：</p>
-                                <p>2022年11月8日（火）から</p>
+                                <p>2022年12月21日（火）から</p>
                             </div>
                         </a>
                     </div>
@@ -71,7 +106,7 @@ import MainContentOtherPage from "../components/MainContentOtherPage.astro";
                             </div>
                             <div>
                                 <p>申込方法：</p>
-                                <p>2022年11月8日（火）から</p>
+                                <p>2022年11月16日（火）から</p>
                             </div>
                         </a>
                     </div>
@@ -103,7 +138,7 @@ import MainContentOtherPage from "../components/MainContentOtherPage.astro";
         }
         .card-wrapper {
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-start;
             flex-direction: row;
             flex-wrap: wrap;
             gap: 1%;
@@ -115,9 +150,8 @@ import MainContentOtherPage from "../components/MainContentOtherPage.astro";
                 background-color: #fff;
                 padding: 3.12%;
                 border-radius: 10px;
-                width: 32.33%;
                 font-size: 14px;
-                flex: 1 1 300px;
+                flex: 0 1 32.66%;
                 margin-bottom: 20px;
                 a {
                     text-decoration: none;

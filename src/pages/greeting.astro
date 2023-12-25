@@ -11,6 +11,12 @@ import MainContentOtherPage from "../components/MainContentOtherPage.astro";
         <div class="bg-primary greeting-wrapper">
             <div class="greeting-desc">
                 <h2>ごあいさつ</h2>
+                <ul class="profile">
+                    <li><a href="#" data-profile="Hirota">研究科長</a></li>
+                    <li><a href="#" data-profile="Sato">佐藤教授</a></li>
+                    <li><a href="#" data-profile="Kurose">黒瀬教授</a></li>
+                    <li><a href="#" data-profile="Aoki">青木教授</a></li>
+                </ul>
                 <div class="card">
                     <img src="" alt="" class="profile-image" />
                     <p class="profile-title"></p>
@@ -18,12 +24,6 @@ import MainContentOtherPage from "../components/MainContentOtherPage.astro";
                     <p class="profile-cat"></p>
                     <p class="profile-desc"></p>
                 </div>
-                <ul class="profile">
-                    <li><a href="#" data-profile="Hirota">研究科長</a></li>
-                    <li><a href="#" data-profile="Sato">佐藤教授</a></li>
-                    <li><a href="#" data-profile="Kurose">黒瀬教授</a></li>
-                    <li><a href="#" data-profile="Aoki">青木教授</a></li>
-                </ul>
             </div>
         </div>
         <div class="bg-primary repaet-image">
@@ -87,17 +87,11 @@ import MainContentOtherPage from "../components/MainContentOtherPage.astro";
             .profile-desc {
                 font-size: 16px;
                 letter-spacing: 1.8px;
-                height: 250px;
-                overflow: scroll;
                 white-space: pre-wrap;
-                @media (max-width: 768px) {
-                    height: 250px;
-                    overflow: scroll;
-                }
             }
         }
         .profile {
-            margin: 24px 0 0;
+            margin-bottom: 48px;
             padding: 0 20px;
             list-style-type: none;
             display: flex;

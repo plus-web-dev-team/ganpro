@@ -5,12 +5,6 @@ import Carousel from "../components/Carousel.astro";
 <div class="main-content">
     <div class="column-right">
         <article>
-            <div class="event">
-                <h2>講座・イベント</h2>
-                <Carousel />
-            </div>
-        </article>
-        <article>
             <div class="cource">
                 <h2>養成コース</h2>
                 <div>
@@ -26,8 +20,12 @@ import Carousel from "../components/Carousel.astro";
                     >
                 </div>
             </div>
+            <div class="event">
+                <h2>講座・イベント</h2>
+                <Carousel />
+            </div>
         </article>
-        <article id="partner">
+        <article>
             <div class="partner">
                 <h2>連携大学</h2>
                 <ul>
@@ -63,8 +61,6 @@ import Carousel from "../components/Carousel.astro";
                     </li>
                 </ul>
             </div>
-        </article>
-        <article>
             <div class="relevance">
                 <h2>弘前大学関連</h2>
                 <div class="related">
@@ -119,32 +115,6 @@ import Carousel from "../components/Carousel.astro";
                 </div>
             </div>
         </article>
-        <article>
-            <div class="program">
-                <img src="/images/logo.svg" alt="" />
-                <div class="address">
-                    <div>
-                        <img src="/images/logo-univ.svg" alt="弘前大学ロゴ" />
-                        <h3>弘前大学 大学院 医学研究科</h3>
-                    </div>
-                    <p>東北広域次世代がんプロ養成プラン 弘前大学事務局</p>
-                    <address>
-                        <p>〒036-8562 青森県弘前市在府町5番地</p>
-                        <p>TEL：0172-39-5410</p>
-                        <p>FAX：0172-39-5209</p>
-                        <a href="mailto:ganpro@hirosaki-u.ac.jp"
-                            >メール：ganpro@hirosaki-u.ac.jp</a
-                        >
-                    </address>
-                </div>
-                <p>
-                    文部科学省 令和5年度
-                    大学教育再生戦略推進費「次世代のがんプロフェッショナル養成プラン」採択プログラム
-                </p>
-                <p class="sitename">東北広域次世代がんプロ養成プラン</p>
-            </div>
-        </article>
-        <article></article>
     </div>
 </div>
 <style lang="scss">
@@ -283,6 +253,7 @@ import Carousel from "../components/Carousel.astro";
 
     // 講座・イベント
     .event {
+        margin-top: 60px;
         h2 {
             font-size: 32px;
             text-align: center;
@@ -291,9 +262,6 @@ import Carousel from "../components/Carousel.astro";
     }
 
     // 連携大学
-    #partner {
-        align-self: center;
-    }
     .partner {
         a {
             text-decoration: none;
@@ -313,7 +281,7 @@ import Carousel from "../components/Carousel.astro";
             row-gap: 8px;
             li {
                 flex: 1 1 auto;
-                width: 50%;
+                width: 100%;
             }
             li:before {
                 content: "";
@@ -390,6 +358,7 @@ import Carousel from "../components/Carousel.astro";
         h2 {
             text-align: center;
             font-size: 28px;
+            margin-top: 6em;
         }
         // 講座一覧
         .related {
@@ -419,26 +388,6 @@ import Carousel from "../components/Carousel.astro";
                 margin-top: 8px;
                 font-weight: 500;
             }
-        }
-    }
-
-    // 基本情報
-    .address {
-        p {
-            font-style: normal;
-        }
-        div {
-            margin: 16px 0;
-            display: flex;
-            align-items: center;
-        }
-        img {
-            width: 40px;
-            margin-right: 8px;
-        }
-        a {
-            text-decoration: none;
-            font-style: normal;
         }
     }
 </style>

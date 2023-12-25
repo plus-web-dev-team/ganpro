@@ -1,0 +1,149 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Icons from "../../components/Icons.astro";
+import BreadCrumb from "../../components/BreadCrumb.astro";
+import MainContent from "../../components/MainContent.astro";
+---
+
+<Layout title="講座・イベント「第16回がん診療市民公開講座」">
+    <main>
+        <BreadCrumb />
+        <div class="bg-primary event-wrapper">
+            <div class="event-desc">
+                <h2>第16回がん診療市民公開講座</h2>
+                <table>
+                    <tr>
+                        <td>日時：</td>
+                        <td><p>2023年12月03日（日） 13：00～15：30</p></td>
+                    </tr>
+                    <tr>
+                        <td>場所：</td>
+                        <td
+                            ><p>
+                                弘前市民会館1F大会議室およびZoomによるオンラインのハイブリッド開催
+                            </p></td
+                        >
+                    </tr>
+                    <tr>
+                        <td>内容：</td>
+                        <td>
+                            <p><span>大腸がんの早期発見と内視鏡治療</span></p>
+                            <p>講師　菊池英純　先生</p>
+                            <p>
+                                <span
+                                    >大腸がんの手術について～結腸がんと直腸がん～</span
+                                >
+                            </p>
+                            <p>講師　三浦　卓也　先生</p>
+                            <p>
+                                <span
+                                    >大腸がんの抗がん剤治療について～目標は何か？～</span
+                                >
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>参加費：</td><td
+                            >無料（視聴にかかる通信費は自己負担）</td
+                        >
+                    </tr>
+                    <tr>
+                        <td>定員：</td><td>80名</td>
+                    </tr>
+                    <tr>
+                        <td>対象：</td><td>一般市民</td>
+                    </tr>
+                    <tr>
+                        <td>申込方法：</td>
+                        <td>申込不要</td>
+                    </tr>
+                </table>
+                <div class="link">
+                    <a href="">受付終了</a>
+                    <a href="/report/report-20231203">活動報告</a>
+                </div>
+            </div>
+            <div class="look">
+                <a href="/events">講座・イベント一覧へ</a>
+            </div>
+        </div>
+        <div class="bg-primary repaet-image">
+            <MainContent />
+        </div>
+    </main>
+    <Icons />
+</Layout>
+<style lang="scss">
+    .look {
+        display: flex;
+        justify-content: center;
+        padding: 2rem;
+        a {
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: 500;
+            text-decoration: none;
+            background-color: var(--font-color);
+            color: #fff;
+        }
+    }
+    .link {
+        display: flex;
+        width: 100%;
+        gap: 20px;
+        margin-top: 20px;
+        justify-content: center;
+        a {
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: 500;
+            text-decoration: none;
+        }
+        a:nth-of-type(1) {
+            background-color: var(--primary-color);
+            color: #fff;
+        }
+        a:nth-of-type(2) {
+            background-color: var(--font-color);
+            color: #fff;
+        }
+    }
+    .event-wrapper {
+        padding: 6.12%;
+        .event-desc {
+            background-color: #fff;
+            border-radius: 20px;
+            max-width: 762px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            padding: 3.12%;
+            h2 {
+                font-size: clamp(1rem, 0.741rem + 1.1vw, 1.625rem);
+                font-weight: 300;
+                text-align: center;
+                color: var(--secondary-color);
+                margin-bottom: 2%;
+                align-self: center;
+            }
+            table {
+                width: 100%;
+                td {
+                    vertical-align: top;
+                }
+                td:nth-of-type(1) {
+                    width: 15%;
+                    font-weight: bold;
+                }
+                td:nth-of-type(2) {
+                    width: fit-content;
+                }
+                span {
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+</style>

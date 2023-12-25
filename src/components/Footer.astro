@@ -4,10 +4,72 @@ import SpNavigation from "./SpNavigation.astro";
 
 <footer class="bg-primary">
     <SpNavigation />
+    <div class="address">
+        <div>
+            <img src="/images/logo-univ.svg" alt="弘前大学ロゴ" />
+            <h3>弘前大学 大学院 医学研究科</h3>
+            <img src="/images/logo.svg" alt="" />
+        </div>
+        <address>
+            <section>
+                <p>東北広域次世代がんプロ養成プラン 弘前大学事務局</p>
+                <p>
+                    〒036-8562 青森県弘前市在府町5番地<br />弘前大学医学研究科
+                </p>
+            </section>
+            <section>
+                <p>TEL：0172-39-5410</p>
+                <p>FAX：0172-39-5209</p>
+                <a href="mailto:ganpro@hirosaki-u.ac.jp"
+                    >メール：ganpro@hirosaki-u.ac.jp</a
+                >
+            </section>
+        </address>
+    </div>
 </footer>
 <style lang="scss">
     footer {
         position: relative;
         padding: 50px;
+    }
+    // 基本情報
+    .address {
+        display: flex;
+        max-width: 1280px;
+        justify-content: center;
+        margin: 0 auto;
+        flex-wrap: wrap;
+        p {
+            font-style: normal;
+        }
+        div {
+            margin-right: 16px;
+            align-items: center;
+            display: flex;
+        }
+        img:nth-of-type(1) {
+            width: 40px;
+            margin-right: 8px;
+        }
+        h3 {
+            margin-right: 16px;
+        }
+        img:nth-of-type(2) {
+            width: 100px;
+            margin-right: 8px;
+        }
+        a {
+            text-decoration: none;
+            font-style: normal;
+        }
+    }
+    address {
+        display: flex;
+        flex-wrap: wrap;
+        section {
+            margin-right: 16px;
+            wdith: 50%;
+            flex-direction: column;
+        }
     }
 </style>
