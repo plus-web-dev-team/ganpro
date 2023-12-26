@@ -250,6 +250,8 @@ import Carousel from "../components/Carousel.astro";
             margin-bottom: 30px;
         }
         p:nth-of-type(1) {
+            height: 375px;
+            overflow: scroll;
             line-height: 1.8;
             @media (max-width: 1279px) {
                 width: 80%;
@@ -261,6 +263,8 @@ import Carousel from "../components/Carousel.astro";
             }
         }
         p:nth-of-type(2) {
+            height: 375px;
+            overflow: scroll;
             line-height: 1.8;
             @media (max-width: 1279px) {
                 width: 80%;
@@ -315,6 +319,9 @@ import Carousel from "../components/Carousel.astro";
 
     // 連携大学
     .partner {
+        @media (max-width: 861px) {
+            margin-top: 60px;
+        }
         a {
             text-decoration: none;
             &:hover {
@@ -411,6 +418,9 @@ import Carousel from "../components/Carousel.astro";
             text-align: center;
             font-size: 28px;
             margin-top: 6em;
+            @media (max-width: 861px) {
+                margin-top: 60px;
+            }
         }
         // 講座一覧
         .related {

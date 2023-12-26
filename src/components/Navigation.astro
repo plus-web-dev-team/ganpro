@@ -4,7 +4,6 @@
         文部科学省「次世代のがんプロフェッショナル養成プラン」採択プログラム<br
         />東北広域次世代がんプロ養成プラン
     </p>
-    <img src="/images/logo.svg" alt="がんプロ" />
 </a>
 <ul>
     <li><a href="/">ホーム</a></li>
@@ -85,9 +84,22 @@
     }
     .logo {
         width: 3rem !important;
+        @media (max-width: 861px) {
+            width: 1rem !important;
+            margin-right: 0.5rem;
+        }
     }
     .sub {
         margin-right: 24px;
-        font-size: 10px;
+        font-size: 16px;
+        @media (max-width: 861px) {
+            font-size: 6px;
+            margin-right: 0;
+        }
+    }
+    .ganpro-logo {
+        @media (max-width: 861px) {
+            display: none;
+        }
     }
 </style>
