@@ -13,19 +13,7 @@ import BreadCrumb from "../components/BreadCrumb.astro";
                 <p>
                     下記フォームに必要事項を入力後、確認ボタンを押してください。
                 </p>
-                <form method="post" action="/public/mail.php">
-                    <div>
-                        <p>ご用件</p>
-                        <select name="ご用件">
-                            <option value="">選択してください</option>
-                            <option value="ご質問・お問い合わせ"
-                                >ご質問・お問い合わせ</option
-                            >
-                            <option value="〇〇〇〇〇〇〇〇"
-                                >〇〇〇〇〇〇〇〇</option
-                            >
-                        </select>
-                    </div>
+                <form method="post" action="../mail.php">
                     <div>
                         <p>お名前</p>
                         <input size="20" type="text" name="お名前" />
